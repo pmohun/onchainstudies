@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clusters — Onchain Studies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">Onchain Studies</a>
+            <div class="nav-links">
+                <a href="/">Discover</a>
+                <a href="/clusters.html" class="active">Clusters</a>
+                <a href="/about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="browse-page">
+        <div class="container">
+            <h1 class="browse-title">Clusters</h1>
+            <p class="browse-subtitle">Reading groups organized around a single theme. Click to explore the books inside.</p>
+
+            <!-- Cluster List -->
+            <div class="cluster-list" id="cluster-list">
+
+                <a class="cluster-card" href="#taste" onclick="showCluster('taste'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>Taste, Judgment, and Selection</h2>
+                        <p>When metrics end, someone still has to choose.</p>
+                        <span class="cluster-card-meta">10 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#power" onclick="showCluster('power'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>Power Without Office</h2>
+                        <p>Influence increasingly detaches from title.</p>
+                        <span class="cluster-card-meta">13 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#sv-canon" onclick="showCluster('sv-canon'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>Silicon Valley Canon</h2>
+                        <p>The essential ideas that shaped the culture of building.</p>
+                        <span class="cluster-card-meta">16 books · Completed</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#architecture" onclick="showCluster('architecture'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>The Architecture of Control</h2>
+                        <p>How systems, codes, and designs shape behavior without anyone noticing.</p>
+                        <span class="cluster-card-meta">10 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#outsider" onclick="showCluster('outsider'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>The Outsider's Advantage</h2>
+                        <p>Why the people who change everything are never insiders.</p>
+                        <span class="cluster-card-meta">11 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#stories" onclick="showCluster('stories'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>Stories We Tell Ourselves</h2>
+                        <p>How narratives — personal, cultural, mythological — construct reality.</p>
+                        <span class="cluster-card-meta">12 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#pressure" onclick="showCluster('pressure'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>Building Under Pressure</h2>
+                        <p>What it actually takes to build something when the stakes are existential.</p>
+                        <span class="cluster-card-meta">11 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#fragility" onclick="showCluster('fragility'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>The Fragility Problem</h2>
+                        <p>Why robust-looking systems break and what survives.</p>
+                        <span class="cluster-card-meta">10 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#lone-mind" onclick="showCluster('lone-mind'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>The Lone Mind</h2>
+                        <p>Solitude, obsession, and what happens when someone goes deep alone.</p>
+                        <span class="cluster-card-meta">12 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#legitimacy" onclick="showCluster('legitimacy'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>The Legitimacy Trap</h2>
+                        <p>Who gets to decide what's real, true, or valuable — and how that power gets captured.</p>
+                        <span class="cluster-card-meta">11 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#info-edge" onclick="showCluster('info-edge'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>The Information Edge</h2>
+                        <p>How knowing what to pay attention to becomes the ultimate advantage.</p>
+                        <span class="cluster-card-meta">13 books · Upcoming</span>
+                    </div>
+                </a>
+
+                <a class="cluster-card" href="#shape-of-time" onclick="showCluster('shape-of-time'); return false;">
+                    <div class="cluster-card-inner">
+                        <h2>The Shape of Time</h2>
+                        <p>Why some ideas take centuries to land and others arrive too early.</p>
+                        <span class="cluster-card-meta">10 books · Upcoming</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Cluster Detail Views -->
+            <div class="cluster-detail" id="cluster-taste" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>Taste, Judgment, and Selection</h2>
+                    <p class="cluster-detail-desc">A six-week reading and discussion cluster on decision-making under irreducible uncertainty: how taste forms, how judgment fails, and how selection becomes power.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/distinction.jpg" alt="Distinction"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Distinction</h3>
+                            <p class="book-author">Pierre Bourdieu</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><span class="book-cover-fallback">The Work of Art in the Age of Mechanical Reproduction</span></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Work of Art in the Age of Mechanical Reproduction</h3>
+                            <p class="book-author">Walter Benjamin</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/skin-in-the-game.jpg" alt="Skin in the Game"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Skin in the Game</h3>
+                            <p class="book-author">Nassim Nicholas Taleb</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/art-of-science.jpg" alt="The Art of Doing Science and Engineering"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Art of Doing Science and Engineering</h3>
+                            <p class="book-author">Richard Hamming</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/mans-search.jpg" alt="Man's Search for Meaning"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Man's Search for Meaning</h3>
+                            <p class="book-author">Viktor Frankl</p>
+                        </div>
+                    </div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/ways-of-seeing.jpg" alt="Ways of Seeing"></div><div class="book-info"><h3 class="book-title">Ways of Seeing</h3><p class="book-author">John Berger</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/the-creative-act.jpg" alt="The Creative Act"></div><div class="book-info"><h3 class="book-title">The Creative Act</h3><p class="book-author">Rick Rubin</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/range.jpg" alt="Range"></div><div class="book-info"><h3 class="book-title">Range</h3><p class="book-author">David Epstein</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/thinking-fast-and-slow.jpg" alt="Thinking, Fast and Slow"></div><div class="book-info"><h3 class="book-title">Thinking, Fast and Slow</h3><p class="book-author">Daniel Kahneman</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/bird-by-bird.jpg" alt="Bird by Bird"></div><div class="book-info"><h3 class="book-title">Bird by Bird</h3><p class="book-author">Anne Lamott</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-power" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>Power Without Office</h2>
+                    <p class="cluster-detail-desc">A six-week reading and discussion cluster on informal power: legitimacy without appointment, agenda-setting, defaults, and how influence hardens into institutions.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/on-power.jpg" alt="On Power"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">On Power</h3>
+                            <p class="book-author">Bertrand de Jouvenel</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><span class="book-cover-fallback">The Managerial Revolution</span></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Managerial Revolution</h3>
+                            <p class="book-author">James Burnham</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/authority.jpg" alt="Authority"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Authority</h3>
+                            <p class="book-author">Richard Sennett</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/true-believer.jpg" alt="The True Believer"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The True Believer</h3>
+                            <p class="book-author">Eric Hoffer</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/revolt-of-public.jpg" alt="The Revolt of the Public"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Revolt of the Public</h3>
+                            <p class="book-author">Martin Gurri</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/code-cyberspace.jpg" alt="Code and Other Laws of Cyberspace"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Code and Other Laws of Cyberspace</h3>
+                            <p class="book-author">Lawrence Lessig</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/institutions.jpg" alt="Institutions, Institutional Change and Economic Performance"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Institutions, Institutional Change and Economic Performance</h3>
+                            <p class="book-author">Douglass North</p>
+                        </div>
+                    </div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/from-third-world-to-first.jpg" alt="From Third World to First"></div><div class="book-info"><h3 class="book-title">From Third World to First</h3><p class="book-author">Lee Kuan Yew</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/kissinger.jpg" alt="Kissinger"></div><div class="book-info"><h3 class="book-title">Kissinger</h3><p class="book-author">Walter Isaacson</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/art-of-war.jpg" alt="Art of War"></div><div class="book-info"><h3 class="book-title">Art of War</h3><p class="book-author">Sun Tzu</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/power-broker.jpg" alt="The Power Broker"></div><div class="book-info"><h3 class="book-title">The Power Broker</h3><p class="book-author">Robert A. Caro</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/conspiracy.jpg" alt="Conspiracy"></div><div class="book-info"><h3 class="book-title">Conspiracy</h3><p class="book-author">Ryan Holiday</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/changing-world-order.jpg" alt="Principles for Dealing with the Changing World Order"></div><div class="book-info"><h3 class="book-title">Principles for Dealing with the Changing World Order</h3><p class="book-author">Ray Dalio</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-sv-canon" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>Silicon Valley Canon</h2>
+                    <p class="cluster-detail-desc">The essential books, essays, and talks that have shaped the culture of Silicon Valley and the people behind its fastest-growing companies. Based on Patrick Collison's book list.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/atomic-bomb.jpg" alt="The Making of the Atomic Bomb"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Making of the Atomic Bomb</h3>
+                            <p class="book-author">Richard Rhodes</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/feynman.jpg" alt="Surely You're Joking, Mr. Feynman"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Surely You're Joking, Mr. Feynman</h3>
+                            <p class="book-author">Richard P. Feynman</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/innovators.jpg" alt="The Innovators"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Innovators</h3>
+                            <p class="book-author">Walter Isaacson</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/founders-at-work.jpg" alt="Founders at Work"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Founders at Work</h3>
+                            <p class="book-author">Jessica Livingston</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/zero-to-one.jpg" alt="Zero to One"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Zero to One</h3>
+                            <p class="book-author">Peter Thiel &amp; Blake Masters</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/innovators-dilemma.jpg" alt="The Innovator's Dilemma"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Innovator's Dilemma</h3>
+                            <p class="book-author">Clayton Christensen</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/hard-thing.jpg" alt="The Hard Thing About Hard Things"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Hard Thing About Hard Things</h3>
+                            <p class="book-author">Ben Horowitz</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/high-output.jpg" alt="High Output Management"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">High Output Management</h3>
+                            <p class="book-author">Andrew S. Grove</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><span class="book-cover-fallback">Finite and Infinite Games</span></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Finite and Infinite Games</h3>
+                            <p class="book-author">James P. Carse</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/zen-motorcycle.jpg" alt="Zen and the Art of Motorcycle Maintenance"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Zen and the Art of Motorcycle Maintenance</h3>
+                            <p class="book-author">Robert M. Pirsig</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/fountainhead.jpg" alt="The Fountainhead"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Fountainhead</h3>
+                            <p class="book-author">Ayn Rand</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/seeing-like-state.jpg" alt="Seeing Like a State"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Seeing Like a State</h3>
+                            <p class="book-author">James C. Scott</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><span class="book-cover-fallback">Silicon Valley's Ultimate Exit</span></div>
+                        <div class="book-info">
+                            <h3 class="book-title">Silicon Valley's Ultimate Exit</h3>
+                            <p class="book-author">Balaji Srinivasan</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><span class="book-cover-fallback">The Vulnerable World Hypothesis</span></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Vulnerable World Hypothesis</h3>
+                            <p class="book-author">Nick Bostrom</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/singularity.jpg" alt="The Singularity Is Near"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Singularity Is Near</h3>
+                            <p class="book-author">Ray Kurzweil</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover"><img src="covers/black-swan.jpg" alt="The Black Swan"></div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Black Swan</h3>
+                            <p class="book-author">Nassim Nicholas Taleb</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-architecture" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>The Architecture of Control</h2>
+                    <p class="cluster-detail-desc">How systems, codes, and designs shape behavior without anyone noticing.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="covers/seeing-like-state.jpg" alt="Seeing Like a State"></div><div class="book-info"><h3 class="book-title">Seeing Like a State</h3><p class="book-author">James C. Scott</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/code-cyberspace.jpg" alt="Code and Other Laws of Cyberspace"></div><div class="book-info"><h3 class="book-title">Code and Other Laws of Cyberspace</h3><p class="book-author">Lawrence Lessig</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/pattern-language.jpg" alt="A Pattern Language"></div><div class="book-info"><h3 class="book-title">A Pattern Language</h3><p class="book-author">Christopher Alexander</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/design-of-everyday-things.jpg" alt="The Design of Everyday Things"></div><div class="book-info"><h3 class="book-title">The Design of Everyday Things</h3><p class="book-author">Don Norman</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/brave-new-world.jpg" alt="Brave New World"></div><div class="book-info"><h3 class="book-title">Brave New World</h3><p class="book-author">Aldous Huxley</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/tools-for-conviviality.jpg" alt="Tools for Conviviality"></div><div class="book-info"><h3 class="book-title">Tools for Conviviality</h3><p class="book-author">Ivan Illich</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/godel-escher-bach.jpg" alt="Gödel, Escher, Bach"></div><div class="book-info"><h3 class="book-title">Gödel, Escher, Bach</h3><p class="book-author">Douglas Hofstadter</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/philosophy-of-software-design.jpg" alt="A Philosophy of Software Design"></div><div class="book-info"><h3 class="book-title">A Philosophy of Software Design</h3><p class="book-author">John Ousterhout</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/elegant-puzzle.jpg" alt="An Elegant Puzzle"></div><div class="book-info"><h3 class="book-title">An Elegant Puzzle</h3><p class="book-author">Will Larson</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/timeless-way-of-building.jpg" alt="The Timeless Way of Building"></div><div class="book-info"><h3 class="book-title">The Timeless Way of Building</h3><p class="book-author">Christopher Alexander</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-outsider" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>The Outsider's Advantage</h2>
+                    <p class="cluster-detail-desc">Why the people who change everything are never insiders.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="covers/fountainhead.jpg" alt="The Fountainhead"></div><div class="book-info"><h3 class="book-title">The Fountainhead</h3><p class="book-author">Ayn Rand</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/shoe-dog.jpg" alt="Shoe Dog"></div><div class="book-info"><h3 class="book-title">Shoe Dog</h3><p class="book-author">Phil Knight</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/on-the-road.jpg" alt="On the Road"></div><div class="book-info"><h3 class="book-title">On the Road</h3><p class="book-author">Jack Kerouac</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/stranger-in-a-strange-land.jpg" alt="Stranger in a Strange Land"></div><div class="book-info"><h3 class="book-title">Stranger in a Strange Land</h3><p class="book-author">Robert A. Heinlein</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/true-believer.jpg" alt="The True Believer"></div><div class="book-info"><h3 class="book-title">The True Believer</h3><p class="book-author">Eric Hoffer</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/barbarian-days.jpg" alt="Barbarian Days"></div><div class="book-info"><h3 class="book-title">Barbarian Days</h3><p class="book-author">William Finnegan</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/zen-motorcycle.jpg" alt="Zen and the Art of Motorcycle Maintenance"></div><div class="book-info"><h3 class="book-title">Zen and the Art of Motorcycle Maintenance</h3><p class="book-author">Robert M. Pirsig</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/the-contrarian.jpg" alt="The Contrarian"></div><div class="book-info"><h3 class="book-title">The Contrarian</h3><p class="book-author">Max Chafkin</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/chaos-monkeys.jpg" alt="Chaos Monkeys"></div><div class="book-info"><h3 class="book-title">Chaos Monkeys</h3><p class="book-author">Antonio García Martínez</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/the-right-stuff.jpg" alt="The Right Stuff"></div><div class="book-info"><h3 class="book-title">The Right Stuff</h3><p class="book-author">Tom Wolfe</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/cant-hurt-me.jpg" alt="Can't Hurt Me"></div><div class="book-info"><h3 class="book-title">Can't Hurt Me</h3><p class="book-author">David Goggins</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-stories" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>Stories We Tell Ourselves</h2>
+                    <p class="cluster-detail-desc">How narratives — personal, cultural, mythological — construct reality.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="covers/power-of-myth.jpg" alt="The Power of Myth"></div><div class="book-info"><h3 class="book-title">The Power of Myth</h3><p class="book-author">Joseph Campbell</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/sapiens.jpg" alt="Sapiens"></div><div class="book-info"><h3 class="book-title">Sapiens</h3><p class="book-author">Yuval Noah Harari</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/things-hidden.jpg" alt="Things Hidden Since the Foundation of the World"></div><div class="book-info"><h3 class="book-title">Things Hidden Since the Foundation of the World</h3><p class="book-author">René Girard</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/slouching-towards-bethlehem.jpg" alt="Slouching Towards Bethlehem"></div><div class="book-info"><h3 class="book-title">Slouching Towards Bethlehem</h3><p class="book-author">Joan Didion</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/1984.jpg" alt="1984"></div><div class="book-info"><h3 class="book-title">1984</h3><p class="book-author">George Orwell</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/screwtape-letters.jpg" alt="The Screwtape Letters"></div><div class="book-info"><h3 class="book-title">The Screwtape Letters</h3><p class="book-author">C.S. Lewis</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/righteous-mind.jpg" alt="The Righteous Mind"></div><div class="book-info"><h3 class="book-title">The Righteous Mind</h3><p class="book-author">Jonathan Haidt</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/east-of-eden.jpg" alt="East of Eden"></div><div class="book-info"><h3 class="book-title">East of Eden</h3><p class="book-author">John Steinbeck</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/moby-dick.jpg" alt="Moby-Dick"></div><div class="book-info"><h3 class="book-title">Moby-Dick</h3><p class="book-author">Herman Melville</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/the-trial.jpg" alt="The Trial"></div><div class="book-info"><h3 class="book-title">The Trial</h3><p class="book-author">Franz Kafka</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/slaughterhouse-five.jpg" alt="Slaughterhouse-Five"></div><div class="book-info"><h3 class="book-title">Slaughterhouse-Five</h3><p class="book-author">Kurt Vonnegut</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/brave-new-world.jpg" alt="Brave New World"></div><div class="book-info"><h3 class="book-title">Brave New World</h3><p class="book-author">Aldous Huxley</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-pressure" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>Building Under Pressure</h2>
+                    <p class="cluster-detail-desc">What it actually takes to build something when the stakes are existential.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="covers/atomic-bomb.jpg" alt="The Making of the Atomic Bomb"></div><div class="book-info"><h3 class="book-title">The Making of the Atomic Bomb</h3><p class="book-author">Richard Rhodes</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/skunk-works.jpg" alt="Skunk Works"></div><div class="book-info"><h3 class="book-title">Skunk Works</h3><p class="book-author">Ben Rich</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/american-prometheus.jpg" alt="American Prometheus"></div><div class="book-info"><h3 class="book-title">American Prometheus</h3><p class="book-author">Kai Bird &amp; Martin J. Sherwin</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/hard-thing.jpg" alt="The Hard Thing About Hard Things"></div><div class="book-info"><h3 class="book-title">The Hard Thing About Hard Things</h3><p class="book-author">Ben Horowitz</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/enders-game.jpg" alt="Ender's Game"></div><div class="book-info"><h3 class="book-title">Ender's Game</h3><p class="book-author">Orson Scott Card</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/high-output.jpg" alt="High Output Management"></div><div class="book-info"><h3 class="book-title">High Output Management</h3><p class="book-author">Andrew S. Grove</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/loonshots.jpg" alt="Loonshots"></div><div class="book-info"><h3 class="book-title">Loonshots</h3><p class="book-author">Safi Bahcall</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/only-the-paranoid-survive.jpg" alt="Only the Paranoid Survive"></div><div class="book-info"><h3 class="book-title">Only the Paranoid Survive</h3><p class="book-author">Andy Grove</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/elon-musk-isaacson.jpg" alt="Elon Musk"></div><div class="book-info"><h3 class="book-title">Elon Musk</h3><p class="book-author">Walter Isaacson</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/bad-blood.jpg" alt="Bad Blood"></div><div class="book-info"><h3 class="book-title">Bad Blood</h3><p class="book-author">John Carreyrou</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/the-right-stuff.jpg" alt="The Right Stuff"></div><div class="book-info"><h3 class="book-title">The Right Stuff</h3><p class="book-author">Tom Wolfe</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-fragility" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>The Fragility Problem</h2>
+                    <p class="cluster-detail-desc">Why robust-looking systems break and what survives.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="covers/black-swan.jpg" alt="The Black Swan"></div><div class="book-info"><h3 class="book-title">The Black Swan</h3><p class="book-author">Nassim Nicholas Taleb</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/antifragile.jpg" alt="Antifragile"></div><div class="book-info"><h3 class="book-title">Antifragile</h3><p class="book-author">Nassim Nicholas Taleb</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/the-stand.jpg" alt="The Stand"></div><div class="book-info"><h3 class="book-title">The Stand</h3><p class="book-author">Stephen King</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/when-money-dies.jpg" alt="When Money Dies"></div><div class="book-info"><h3 class="book-title">When Money Dies</h3><p class="book-author">Adam Fergusson</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/revolt-of-public.jpg" alt="The Revolt of the Public"></div><div class="book-info"><h3 class="book-title">The Revolt of the Public</h3><p class="book-author">Martin Gurri</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/decadent-society.jpg" alt="The Decadent Society"></div><div class="book-info"><h3 class="book-title">The Decadent Society</h3><p class="book-author">Ross Douthat</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/catch-22.jpg" alt="Catch-22"></div><div class="book-info"><h3 class="book-title">Catch-22</h3><p class="book-author">Joseph Heller</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/guns-germs-and-steel.jpg" alt="Guns, Germs, and Steel"></div><div class="book-info"><h3 class="book-title">Guns, Germs, and Steel</h3><p class="book-author">Jared Diamond</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/the-plague.jpg" alt="The Plague"></div><div class="book-info"><h3 class="book-title">The Plague</h3><p class="book-author">Albert Camus</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/oryx-and-crake.jpg" alt="Oryx and Crake"></div><div class="book-info"><h3 class="book-title">Oryx and Crake</h3><p class="book-author">Margaret Atwood</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-lone-mind" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>The Lone Mind</h2>
+                    <p class="cluster-detail-desc">Solitude, obsession, and what happens when someone goes deep alone.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="covers/walden.jpg" alt="Walden"></div><div class="book-info"><h3 class="book-title">Walden</h3><p class="book-author">Henry David Thoreau</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/wind-up-bird-chronicle.jpg" alt="The Wind-Up Bird Chronicle"></div><div class="book-info"><h3 class="book-title">The Wind-Up Bird Chronicle</h3><p class="book-author">Haruki Murakami</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/mans-search.jpg" alt="Man's Search for Meaning"></div><div class="book-info"><h3 class="book-title">Man's Search for Meaning</h3><p class="book-author">Viktor Frankl</p></div></div>
+                    <div class="book-card"><div class="book-cover"><span class="book-cover-fallback">The Book of Disquiet</span></div><div class="book-info"><h3 class="book-title">The Book of Disquiet</h3><p class="book-author">Fernando Pessoa</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/meditations.jpg" alt="Meditations"></div><div class="book-info"><h3 class="book-title">Meditations</h3><p class="book-author">Marcus Aurelius</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/norwegian-wood.jpg" alt="Norwegian Wood"></div><div class="book-info"><h3 class="book-title">Norwegian Wood</h3><p class="book-author">Haruki Murakami</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/kafka-on-the-shore.jpg" alt="Kafka on the Shore"></div><div class="book-info"><h3 class="book-title">Kafka on the Shore</h3><p class="book-author">Haruki Murakami</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/old-man-and-the-sea.jpg" alt="The Old Man and the Sea"></div><div class="book-info"><h3 class="book-title">The Old Man and the Sea</h3><p class="book-author">Ernest Hemingway</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/on-the-shortness-of-life.jpg" alt="On the Shortness of Life"></div><div class="book-info"><h3 class="book-title">On the Shortness of Life</h3><p class="book-author">Seneca</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/flowers-for-algernon.jpg" alt="Flowers for Algernon"></div><div class="book-info"><h3 class="book-title">Flowers for Algernon</h3><p class="book-author">Daniel Keyes</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/essays-in-idleness.jpg" alt="Essays in Idleness"></div><div class="book-info"><h3 class="book-title">Essays in Idleness</h3><p class="book-author">Yoshida Kenkō</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/the-mezzanine.jpg" alt="The Mezzanine"></div><div class="book-info"><h3 class="book-title">The Mezzanine</h3><p class="book-author">Nicholson Baker</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-legitimacy" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>The Legitimacy Trap</h2>
+                    <p class="cluster-detail-desc">Who gets to decide what's real, true, or valuable — and how that power gets captured.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="covers/democracy-in-america.jpg" alt="Democracy in America"></div><div class="book-info"><h3 class="book-title">Democracy in America</h3><p class="book-author">Alexis de Tocqueville</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/diversity-myth.jpg" alt="The Diversity Myth"></div><div class="book-info"><h3 class="book-title">The Diversity Myth</h3><p class="book-author">Peter Thiel</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/concept-of-the-political.jpg" alt="The Concept of the Political"></div><div class="book-info"><h3 class="book-title">The Concept of the Political</h3><p class="book-author">Carl Schmitt</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/infinite-jest.jpg" alt="Infinite Jest"></div><div class="book-info"><h3 class="book-title">Infinite Jest</h3><p class="book-author">David Foster Wallace</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/sovereign-individual.jpg" alt="The Sovereign Individual"></div><div class="book-info"><h3 class="book-title">The Sovereign Individual</h3><p class="book-author">James Dale Davidson</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/animal-farm.jpg" alt="Animal Farm"></div><div class="book-info"><h3 class="book-title">Animal Farm</h3><p class="book-author">George Orwell</p></div></div>
+                    <div class="book-card"><div class="book-cover"><span class="book-cover-fallback">The Dehumanization of Art</span></div><div class="book-info"><h3 class="book-title">The Dehumanization of Art</h3><p class="book-author">José Ortega y Gasset</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/thus-spoke-zarathustra.jpg" alt="Thus Spoke Zarathustra"></div><div class="book-info"><h3 class="book-title">Thus Spoke Zarathustra</h3><p class="book-author">Friedrich Nietzsche</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/rome-inc.jpg" alt="Rome, Inc."></div><div class="book-info"><h3 class="book-title">Rome, Inc.</h3><p class="book-author">Stanley Bing</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/art-of-not-being-governed.jpg" alt="The Art of Not Being Governed"></div><div class="book-info"><h3 class="book-title">The Art of Not Being Governed</h3><p class="book-author">James C. Scott</p></div></div>
+                    <div class="book-card"><div class="book-cover"><span class="book-cover-fallback">The Managerial Revolution</span></div><div class="book-info"><h3 class="book-title">The Managerial Revolution</h3><p class="book-author">James Burnham</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-info-edge" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>The Information Edge</h2>
+                    <p class="cluster-detail-desc">How knowing what to pay attention to becomes the ultimate advantage.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="covers/the-big-short.jpg" alt="The Big Short"></div><div class="book-info"><h3 class="book-title">The Big Short</h3><p class="book-author">Michael Lewis</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/poor-charlies-almanack.jpg" alt="Poor Charlie's Almanack"></div><div class="book-info"><h3 class="book-title">Poor Charlie's Almanack</h3><p class="book-author">Charlie Munger</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/hackers-and-painters.jpg" alt="Hackers and Painters"></div><div class="book-info"><h3 class="book-title">Hackers and Painters</h3><p class="book-author">Paul Graham</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/contact.jpg" alt="Contact"></div><div class="book-info"><h3 class="book-title">Contact</h3><p class="book-author">Carl Sagan</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/good-strategy-bad-strategy.jpg" alt="Good Strategy, Bad Strategy"></div><div class="book-info"><h3 class="book-title">Good Strategy, Bad Strategy</h3><p class="book-author">Richard Rumelt</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/dream-machine.jpg" alt="The Dream Machine"></div><div class="book-info"><h3 class="book-title">The Dream Machine</h3><p class="book-author">M. Mitchell Waldrop</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/thinking-fast-and-slow.jpg" alt="Thinking, Fast and Slow"></div><div class="book-info"><h3 class="book-title">Thinking, Fast and Slow</h3><p class="book-author">Daniel Kahneman</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/model-thinker.jpg" alt="Model Thinker"></div><div class="book-info"><h3 class="book-title">Model Thinker</h3><p class="book-author">Scott Page</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/liars-poker.jpg" alt="Liar's Poker"></div><div class="book-info"><h3 class="book-title">Liar's Poker</h3><p class="book-author">Michael Lewis</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/range.jpg" alt="Range"></div><div class="book-info"><h3 class="book-title">Range</h3><p class="book-author">David Epstein</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/factfulness.jpg" alt="Factfulness"></div><div class="book-info"><h3 class="book-title">Factfulness</h3><p class="book-author">Hans Rosling</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/everything-store.jpg" alt="The Everything Store"></div><div class="book-info"><h3 class="book-title">The Everything Store</h3><p class="book-author">Brad Stone</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/new-new-thing.jpg" alt="The New New Thing"></div><div class="book-info"><h3 class="book-title">The New New Thing</h3><p class="book-author">Michael Lewis</p></div></div>
+                </div>
+            </div>
+
+            <div class="cluster-detail" id="cluster-shape-of-time" style="display:none;">
+                <button class="back-btn" onclick="hideCluster()">&larr; All Clusters</button>
+                <div class="cluster-detail-header">
+                    <h2>The Shape of Time</h2>
+                    <p class="cluster-detail-desc">Why some ideas take centuries to land and others arrive too early.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="covers/shape-of-time.jpg" alt="The Shape of Time"></div><div class="book-info"><h3 class="book-title">The Shape of Time</h3><p class="book-author">George Kubler</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/foundation.jpg" alt="Foundation"></div><div class="book-info"><h3 class="book-title">Foundation</h3><p class="book-author">Isaac Asimov</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/study-of-history-vol-1.jpg" alt="A Study of History, Vol. 1"></div><div class="book-info"><h3 class="book-title">A Study of History, Vol. 1</h3><p class="book-author">Arnold J. Toynbee</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/singularity.jpg" alt="The Singularity Is Near"></div><div class="book-info"><h3 class="book-title">The Singularity Is Near</h3><p class="book-author">Ray Kurzweil</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/albions-seed.jpg" alt="Albion's Seed"></div><div class="book-info"><h3 class="book-title">Albion's Seed</h3><p class="book-author">David Hackett Fischer</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/one-hundred-years-of-solitude.jpg" alt="One Hundred Years of Solitude"></div><div class="book-info"><h3 class="book-title">One Hundred Years of Solitude</h3><p class="book-author">Gabriel García Márquez</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/lives-of-the-artists.jpg" alt="The Lives of the Artists"></div><div class="book-info"><h3 class="book-title">The Lives of the Artists</h3><p class="book-author">Giorgio Vasari</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/guns-germs-and-steel.jpg" alt="Guns, Germs, and Steel"></div><div class="book-info"><h3 class="book-title">Guns, Germs, and Steel</h3><p class="book-author">Jared Diamond</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/brief-history-of-time.jpg" alt="A Brief History of Time"></div><div class="book-info"><h3 class="book-title">A Brief History of Time</h3><p class="book-author">Stephen Hawking</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="covers/meaning-in-history.jpg" alt="Meaning in History"></div><div class="book-info"><h3 class="book-title">Meaning in History</h3><p class="book-author">Karl Löwith</p></div></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Onchain Studies</p>
+        </div>
+    </footer>
+
+    <script>
+    function showCluster(id) {
+        document.getElementById('cluster-list').style.display = 'none';
+        document.querySelector('.browse-subtitle').style.display = 'none';
+        document.getElementById('cluster-' + id).style.display = 'block';
+        window.scrollTo(0, 0);
+        history.pushState(null, '', '#' + id);
+    }
+
+    function hideCluster() {
+        document.querySelectorAll('.cluster-detail').forEach(function(el) {
+            el.style.display = 'none';
+        });
+        document.getElementById('cluster-list').style.display = 'flex';
+        document.querySelector('.browse-subtitle').style.display = 'block';
+        history.pushState(null, '', '/clusters.html');
+    }
+
+    // Handle direct links and back button
+    function checkHash() {
+        var hash = window.location.hash.replace('#', '');
+        if (hash && document.getElementById('cluster-' + hash)) {
+            showCluster(hash);
+        }
+    }
+    checkHash();
+    window.addEventListener('popstate', function() {
+        var hash = window.location.hash.replace('#', '');
+        if (hash && document.getElementById('cluster-' + hash)) {
+            showCluster(hash);
+        } else {
+            hideCluster();
+        }
+    });
+    </script>
+</body>
+</html>
