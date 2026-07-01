@@ -111,6 +111,10 @@ body {
     margin-bottom: 2rem;
 }
 
+.hero .container {
+    max-width: 680px;
+}
+
 .subheader {
     font-size: 0.9375rem;
     color: #888;
@@ -120,10 +124,7 @@ body {
 /* Signup */
 .signup {
     display: flex;
-    justify-content: center;
     gap: 0.5rem;
-    max-width: 420px;
-    margin: 0 auto;
 }
 
 .signup-input {
@@ -157,12 +158,76 @@ body {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.3s, transform 0.15s, min-width 0.3s;
     white-space: nowrap;
+    min-width: 140px;
+    position: relative;
+    overflow: visible;
 }
 
 .signup-btn:hover {
     background: #333;
+}
+
+.signup-btn:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+.signup-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.signup-btn--loading {
+    color: transparent;
+}
+
+.signup-btn--loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: btn-spin 0.6s linear infinite;
+}
+
+@keyframes btn-spin {
+    to { transform: rotate(360deg); }
+}
+
+.signup-btn--success {
+    background: #16a34a;
+    color: transparent;
+    pointer-events: none;
+}
+
+.signup-btn--success::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 7px;
+    margin: -5px 0 0 -6px;
+    border-left: 1.5px solid #fff;
+    border-bottom: 1.5px solid #fff;
+    transform: rotate(-45deg);
+    animation: btn-check 0.3s ease forwards;
+}
+
+@keyframes btn-check {
+    from { opacity: 0; transform: rotate(-45deg) scale(0.5); }
+    to { opacity: 1; transform: rotate(-45deg) scale(1); }
+}
+
+.signup--success .signup-input {
+    border-color: #16a34a;
+    background: #f0fdf4;
 }
 
 .signup-message {
@@ -171,6 +236,50 @@ body {
     margin-top: 0.5rem;
     text-align: center;
     min-height: 1.25rem;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.signup-message--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.signup-message--success {
+    color: #16a34a;
+}
+
+.signup-message--error {
+    color: #dc2626;
+}
+
+.social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    color: #999;
+    margin-top: 1rem;
+}
+
+.avatar-stack {
+    display: flex;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #f4f3f1;
+    object-fit: cover;
+    margin-left: -8px;
+}
+
+.avatar:first-child {
+    margin-left: 0;
 }
 
 /* Book Grid Section */
@@ -416,18 +525,13 @@ body {
 
 .about-link-list {
     list-style: none;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0 1.5rem;
 }
 
 .about-link-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.625rem 0;
-    border-bottom: 1px solid #eceae6;
-}
-
-.about-link-list li:last-child {
-    border-bottom: none;
+    display: contents;
 }
 
 .about-link-list a {
@@ -437,16 +541,30 @@ body {
     color: #1a1a1a;
     text-decoration: none;
     transition: opacity 0.2s;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid #eceae6;
 }
 
 .about-link-list a:hover {
     opacity: 0.5;
 }
 
-.about-link-handle {
+a.about-link-handle {
     font-family: 'Inter', sans-serif;
     font-size: 0.8125rem;
+    font-weight: 400;
     color: #999;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid #eceae6;
+    transition: opacity 0.2s;
+}
+
+a.about-link-handle:hover {
+    opacity: 0.5;
 }
 
 /* Browse Page */
@@ -594,5 +712,189 @@ footer p {
 
     .container {
         padding: 0 1.25rem;
+    }
+}
+
+/* Quarter Drop */
+.quarter-drop {
+    padding: 4rem 0;
+    border-bottom: 1px solid #d9d6d1;
+}
+
+.quarter-drop-header {
+    margin-bottom: 2.5rem;
+}
+
+.quarter-drop-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.quarter-drop-desc {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: #555;
+    max-width: 640px;
+}
+
+.quarter-drop-curator {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    color: #999;
+    margin-top: 1rem;
+}
+
+.quarter-drop-grid {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.quarter-drop-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.quarter-drop-link:hover {
+    color: #1a1a1a;
+}
+
+/* Blurred book card */
+.book-card--blurred {
+    pointer-events: none;
+}
+
+.book-card--blurred .book-cover {
+    filter: blur(8px);
+    transform: scale(1.05);
+}
+
+.book-card--blurred .book-info {
+    filter: blur(4px);
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 4rem 0;
+    border-bottom: 1px solid #d9d6d1;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step {
+    padding: 1.5rem 0;
+}
+
+.step-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #aaa;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.step-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+}
+
+.step-desc {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Quote Section */
+.quote-section {
+    padding: 5rem 0;
+    border-bottom: 1px solid #d9d6d1;
+}
+
+.pull-quote {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pull-quote + .pull-quote {
+    margin-top: 3rem;
+}
+
+.pull-quote p {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #2a2a2a;
+    margin-bottom: 1.25rem;
+}
+
+.pull-quote cite {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    color: #888;
+}
+
+/* Final CTA */
+.final-cta {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.final-cta .signup {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* Responsive: Quarter Drop & How It Works */
+@media (max-width: 900px) {
+    .quarter-drop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .pull-quote p {
+        font-size: 1.25rem;
+    }
+
+    .quarter-drop-title {
+        font-size: 1.375rem;
+    }
+
+    .final-cta h2 {
+        font-size: 1.375rem;
     }
 }
