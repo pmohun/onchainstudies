@@ -1,0 +1,54 @@
+WELL READ — DESIGN SPRINT / ROUND ONE
+
+PURPOSE
+Choose a recognizable visual language before further feature development. The existing homepage remains intact. These are authored web compositions, not changes to billing or production behavior.
+
+REVIEW
+Open /design/ for the comparison board. It shows three live, scaled desktop previews, with full-page links and mobile viewport controls. Evaluate first impression, actual typography, book presentation, imagery, selection logic, and the annual CTA together. A font change alone is not a direction.
+
+CONSTRAINTS
+Flexoki palette (Steph Ango, credited and MIT license in the project).
+Well Read is the name. Build a library worth reading is the headline.
+Existing real cover images and licensed historic library photography; no invented founder portrait, reviews, or customer counts.
+Same provisional audience (busy founders), twelve monthly books, field guide, immediate starter shelf, and $360 annual concept across directions.
+Preview links lead to the existing free starter-shelf demo. No charges, reservations, publishing, or outreach.
+No changes to the current site in this round.
+
+A / JOURNAL
+A publication with an oversized literary masthead, running heads, a full-width historic photograph, narrow essay columns, and a book sequence below. Libre Caslon Display, EB Garamond, DM Sans. Flexoki black and red.
+Strength: a distinctive reading experience and editorial personality.
+Question: is the photograph and publication framing helping the offer, or delaying understanding? Does it become a literary lifestyle magazine rather than a curator’s service?
+
+B / ARCHIVE
+A collection interface with a catalog rail and an accession sheet. One book is examined through its question, neighboring books, moment of usefulness, and suitability. Related entries follow as catalog rows. DM Sans with system monospace. Flexoki paper, black, yellow-50.
+Strength: selection logic is the primary visual material. Most directly expresses the proposed product.
+Question: is it inviting enough, and does it communicate the ongoing year rather than a static database? Avoid pretending prototype metadata represents actual accession history.
+
+C / BOOKSHOP
+A saturated Flexoki blue shopfront, Fraunces title, yellow shelf edge, straight-on book covers, and a direct annual invitation. More expressive than the current site without adding decorative icons or generic cards.
+Strength: clear, warm, physical, and recognizable from a distance.
+Question: does it communicate a considered library, or primarily sell a parcel of products? Does the brighter palette feel like Phil?
+
+SPRINT SEQUENCE
+Round 1: compare three concrete directions; pick one; name a keeper and a rejection. Do not blend all three into a generic compromise.
+Round 2: refine the selected direction at desktop and mobile sizes. Work through headline, book record/field guide, historic photo, annual offer, quiz, and a representative shipping insert. Settle type scale, grid, spacing, color roles, image treatment, and controls together.
+Round 3: review the final visual system in full page context. Document tokens and component behavior; then implement it into the existing working site and test its real interactions.
+
+DECISION CRITERIA
+Recognition without the wordmark.
+Visible curation rather than only a subscription promise.
+Clear offer and next action.
+Mobile reading quality and accessibility.
+Faithfulness to Phil’s taste and the stated editorial point of view.
+My starting hypothesis is Archive, with Journal as the strongest literary alternative. This is a recommendation to test with Phil, not a selected direction.
+
+PHOTOGRAPHS
+Wharton photograph by Magicpiano, CC BY-SA 3.0; Morgan photograph by Pingthing, CC BY-SA 4.0. Source and license links are visible in each prototype. Original files remain unchanged. Display crops are identified and retain the source image license. Full credits are in ../images/libraries/credits.txt.
+
+ROUND TWO — BOOKSHOP SELECTED BY PHIL
+Selected direction C, Bookshop. Refined working homepage: ../index.html. Review at /design/bookshop-review.html with desktop/mobile viewport controls. Original round-one prototypes are retained.
+The hero follows the selected blue shopfront, Fraunces type, yellow shelf edge, and straight book covers. Cover links point to the individual curation notes. Field guide uses a yellow paper insert, quiz uses a muted paper surface, and annual membership keeps the same blue accent and title/body hierarchy. Existing quiz, download, signup preview, and all five font comparisons remain.
+Type defaults to Fraunces + DM Sans. Font picker preferences for this direction have a separate key so earlier font comparisons do not override the approved direction. No live payment setup or publishing is included.
+Design tokens and responsive rules are in ../bookshop.css. Warm paper #FFFCF0, ink #100F0F, blue-600 #205EA6, blue-700 #1A4F8C, yellow-50 #FAEEC6, yellow-150 #F1D67E; borders base-150 #DAD8CE; muted text base-700 #575653.
+Wharton’s photo is displayed cropped in the library window with visible source/license links. Morgan’s photo remains at its original aspect ratio as a later library reference.
+Visual verification: native browser automation was prevented by active-user changes. Local assets, markup, script wiring, contrast, and interaction logic are checked independently; full browser layout review remains to be completed.

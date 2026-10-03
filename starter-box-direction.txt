@@ -1,0 +1,19 @@
+WELL READ — STARTER-BOX REVISION
+
+This supersedes the annual-first offer in subscription-direction.txt and positioning-pilot.txt. Those files retain earlier exploration.
+
+Audience hypothesis: busy founders who want a personal library beyond business books.
+First offer: Your first shelf. Three books, three one-page field guides, and a digital starter shelf. One-time purchase; no automatic annual enrollment.
+Draft price: $95 including US shipping, pending Phil's decision and cost validation.
+Proposed opening selections from the existing collection: Surely You're Joking, Mr. Feynman!; Ways of Seeing; On Writing by Stephen King. Theme: curiosity, observation, and craft (“A more creative way of thinking”). These are editorial candidates, not validated conversion winners or a committed shipping list.
+
+Homepage order: outcome and audience -> contents and selection rationale -> complete sample guide -> starter-box offer -> email signup -> lower-page philosophy and future annual path -> FAQ.
+Historic library photos are removed from the sales page; image files remain available.
+Quiz: one fixed recommendation, then a direct invitation to the full box. No email gate or real lead capture has been implemented; add secure capture and delivery before describing it as a functioning lead magnet.
+Checkout remains a local preview, with no transmitted information or payment.
+
+Validation proposal: sell 20 paid starter boxes manually before automating or pitching annual as the initial purchase. Twenty is a research target, not a displayed inventory limit. Confirm editions, supplier availability, per-box costs, dispatch date, shipping/refund terms, and secure payment/digital delivery before taking orders. Measure paid conversion, reading engagement, perceived guide value, and willingness to buy the next shelf. Offer annual separately after experience supports it.
+
+Agentation: official agentation 3.1.2 installed as a React island. Run npm run build:annotations to rebuild; npm run dev rebuilds and starts a Python server on port 8000 (stop an existing server first). Local toolbar only; no MCP endpoint configured. Use its Copy action and paste feedback into the conversation. Loader runs on localhost/127.0.0.1/[::1], only in the top-level page. The font picker moves left while annotations are enabled. Bundle and node_modules are ignored by git.
+
+LATEST FEEDBACK: Replace the recommendation quiz with a single email signup for starter-box launch updates. Form uses native email validation and explicitly reports that collection is not connected; it does not store/send addresses or claim success. Awaiting mailing-list destination from Phil.

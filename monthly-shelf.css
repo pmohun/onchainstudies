@@ -1,0 +1,173 @@
+/* Flexoki by Steph Ango — https://stephango.com/flexoki (MIT). */
+:root {
+  --font-title: 'Libre Caslon Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --flexoki-paper: #FFFCF0;
+  --flexoki-black: #100F0F;
+  --flexoki-base-50: #F2F0E5;
+  --flexoki-base-100: #E6E4D9;
+  --flexoki-base-150: #DAD8CE;
+  --flexoki-base-200: #CECDC3;
+  --flexoki-base-700: #575653;
+  --flexoki-red-600: #AF3029;
+  --flexoki-red-700: #942822;
+  --paper: var(--flexoki-paper);
+  --ink: var(--flexoki-black);
+  --muted: var(--flexoki-base-700);
+  --red: var(--flexoki-red-600);
+  --line: var(--flexoki-base-150);
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 30px; }
+body { margin: 0; color: var(--ink); background: var(--paper); font: 15px/1.7 var(--font-body); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+a:hover { color: var(--red); }
+button, input, select { font: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
+.wrap { width: min(1060px, calc(100% - 80px)); margin-inline: auto; }
+.masthead { display: flex; justify-content: space-between; gap: 30px; align-items: center; padding-block: 28px; border-bottom: 1px solid var(--line); }
+.wordmark { font-size: 16px; font-weight: 500; text-decoration: none; }
+nav { display: flex; gap: 28px; font-size: 12px; }
+nav a { text-decoration: none; }
+p { margin: 0 0 18px; }
+h1, h2, h3 { font-family: var(--font-title); font-weight: 400; margin: 0; }
+h1 { font-size: clamp(60px, 6.5vw, 82px); line-height: 1.02; letter-spacing: -.025em; }
+h2 { font-size: 36px; line-height: 1.1; letter-spacing: -.015em; }
+h3 { font-size: 27px; line-height: 1.1; }
+.introduction { padding-top: 46px; }
+.byline { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+.intro-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 65px; align-items: start; }
+.intro-note { padding-top: 3px; font-size: 14px; }
+.intro-note p:nth-child(2) { color: var(--muted); }
+.join-link { display: inline-block; color: var(--red); font-weight: 500; font-size: 13px; }
+.join-link span { margin-left: 12px; }
+.intro-note small { display: block; font-size: 11px; margin-top: 8px; color: var(--muted); }
+figure { margin: 0; }
+figure img { display: block; width: 100%; height: auto; }
+.opening-library { margin-top: 42px; }
+.opening-library img { aspect-ratio: 1024 / 680; }
+figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; font-size: 10px; color: var(--muted); padding-top: 12px; }
+figcaption a { color: var(--muted); }
+.section { padding-top: 58px; margin-top: 58px; border-top: 1px solid var(--line); }
+.section-intro { display: grid; grid-template-columns: 1fr 1.2fr; gap: 65px; margin-bottom: 36px; }
+.section-intro > div { max-width: 520px; }
+.section-intro a { font-size: 12px; }
+.book-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 38px; }
+.book-entry { display: grid; grid-template-columns: 100px 1fr; align-items: start; gap: 18px; }
+.book-entry img { width: 100px; height: auto; }
+.book-entry h3 { font-size: 23px; }
+.book-entry p { font-size: 12px; line-height: 1.65; margin: 12px 0 0; }
+.book-entry .book-author { font-size: 10px; color: var(--muted); margin-top: 6px; }
+.caption { font-size: 11px; line-height: 1.6; color: var(--muted); }
+.selection > .caption { margin: 26px 0 0; }
+.second-library { width: 80%; margin-left: auto; }
+.source-note { font-size: 10px; color: var(--muted); margin: 16px 0 0; text-align: right; }
+.membership { display: grid; grid-template-columns: 1.4fr 1fr; gap: 65px; align-items: center; }
+.membership h2 { margin-bottom: 20px; }
+.membership > div > p:not(.caption):not(.price) { max-width: 480px; }
+.price { font-family: var(--font-title); font-size: 42px; line-height: 1.2; margin: 22px 0 10px; }
+.price span { font: 12px var(--font-body); color: var(--muted); margin-left: 7px; }
+.membership-action { justify-self: end; }
+.button { padding: 13px 22px; background: var(--red); color: var(--paper); border: 0; cursor: pointer; font-size: 13px; display: inline-flex; justify-content: space-between; align-items: center; gap: 30px; }
+.button:hover { background: var(--flexoki-red-700); }
+.membership-action .caption { margin: 12px 0 0; }
+.questions { display: grid; grid-template-columns: 1fr 1.2fr; gap: 65px; }
+details { border-bottom: 1px solid var(--line); }
+details:first-child { border-top: 1px solid var(--line); }
+summary { cursor: pointer; font-size: 13px; padding: 15px 0; }
+details p { font-size: 13px; color: var(--muted); margin: 0 0 20px; }
+.personal-signoff { margin: 48px 0 60px; font-size: 13px; }
+.personal-signoff span { display: inline-block; margin-top: 12px; }
+footer { display: flex; align-items: baseline; gap: 28px; padding: 24px 0 85px; border-top: 1px solid var(--line); font-size: 10px; color: var(--muted); }
+footer span:first-child { flex: 1; }
+dialog { border: 1px solid var(--line); background: var(--paper); color: var(--ink); width: min(500px, calc(100% - 30px)); padding: 32px; max-height: 90dvh; overflow: auto; }
+dialog::backdrop { background: #100f0f88; }
+dialog h2 { font-size: 36px; margin-bottom: 14px; }
+dialog > p { font-size: 12px; color: var(--muted); }
+.eyebrow { font-size: 10px; letter-spacing: .08em; margin-bottom: 20px; }
+.close { position: absolute; right: 12px; top: 8px; background: transparent; border: 0; font-size: 25px; cursor: pointer; }
+.order-total { display: flex; justify-content: space-between; gap: 20px; border-block: 1px solid var(--line); padding: 16px 0; margin: 20px 0; font-size: 13px; }
+form label { display: block; font-size: 12px; margin: 12px 0 6px; }
+form input:not([type=checkbox]), form select { width: 100%; padding: 10px; border: 1px solid var(--line); background: var(--paper); border-radius: 0; }
+.fine-print { font-size: 10px; color: var(--muted); margin-top: 16px; }
+form .consent { display: flex; align-items: start; gap: 9px; font-size: 11px; margin-block: 18px; }
+.consent input { margin: 4px 0 0; }
+form .button { width: 100%; }
+#checkout-status { font-size: 12px; color: var(--red); margin: 16px 0 0; }
+@media (max-width: 950px) {
+  .wrap { width: calc(100% - 48px); }
+  .intro-layout, .section-intro, .membership, .questions { gap: 36px; }
+  h1 { font-size: 64px; }
+  .book-list { gap: 24px; }
+  .book-entry { display: block; }
+  .book-entry img { width: 115px; margin-bottom: 20px; }
+}
+@media (max-width: 620px) {
+  .wrap { width: calc(100% - 36px); }
+  .masthead { padding-block: 22px; gap: 15px; }
+  .wordmark { font-size: 14px; }
+  nav { gap: 16px; font-size: 11px; }
+  .introduction { padding-top: 34px; }
+  .byline { font-size: 11px; }
+  .intro-layout, .section-intro, .membership, .questions { grid-template-columns: 1fr; gap: 26px; }
+  h1 { font-size: clamp(47px, 12vw, 66px); }
+  h2 { font-size: 32px; }
+  .intro-note { font-size: 14px; max-width: 430px; }
+  .opening-library { margin-top: 30px; }
+  figcaption { display: block; font-size: 9px; }
+  figcaption span { display: block; margin-bottom: 4px; }
+  .section { padding-top: 36px; margin-top: 36px; }
+  .section-intro { margin-bottom: 30px; }
+  .book-list { grid-template-columns: 1fr; gap: 30px; }
+  .book-entry { display: grid; grid-template-columns: 90px 1fr; gap: 20px; }
+  .book-entry img { width: 90px; margin-bottom: 0; }
+  .book-entry h3 { font-size: 26px; }
+  .second-library { width: 100%; }
+  .source-note { text-align: left; }
+  .membership-action { justify-self: start; }
+  .personal-signoff { margin-block: 36px; }
+  footer { flex-wrap: wrap; gap: 8px 20px; }
+  footer span:first-child { flex-basis: 100%; }
+  dialog { padding: 27px; }
+}
+.selection-criteria { display: grid; grid-template-columns: repeat(3, 1fr); gap: 38px; margin: 0; }
+.selection-criteria dt { font-weight: 500; font-size: 14px; margin-bottom: 8px; }
+.selection-criteria dd { margin: 0; font-size: 13px; color: var(--muted); }
+.book-source { display: inline-block; font-size: 10px; margin-top: 12px; }
+.field-guide { margin-top: 30px; }
+.field-guide summary { color: var(--red); }
+.field-guide article { max-width: 660px; padding: 15px 0 10px; }
+.field-guide h3 { font-size: 32px; margin-bottom: 20px; }
+.field-guide article p { font-size: 14px; color: var(--ink); }
+.field-guide article .caption { font-size: 11px; color: var(--muted); }
+.quiz-fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 24px; }
+.quiz-fields label { min-height: 42px; }
+#starter-form .button { width: auto; }
+#starter-result { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 28px; max-width: 720px; }
+#starter-result[hidden] { display: none; }
+#starter-result h3 { margin-bottom: 15px; }
+#starter-books { list-style: none; padding: 0; margin: 25px 0; }
+#starter-books li { display: flex; gap: 20px; align-items: start; margin-bottom: 24px; }
+#starter-books img { width: 55px; height: auto; }
+#starter-books strong { font-weight: 500; font-size: 14px; }
+#starter-books span { display: block; font-size: 11px; color: var(--muted); }
+#starter-books p { font-size: 13px; margin: 7px 0 0; }
+.libraries .opening-library { margin-top: 0; width: 80%; }
+.libraries .second-library { margin-top: 35px; }
+@media (max-width: 620px) {
+  .selection-criteria, .quiz-fields { grid-template-columns: 1fr; gap: 20px; }
+  .quiz-fields label { min-height: 0; }
+  .libraries .opening-library { width: 100%; }
+  nav { gap: 12px; }
+}
+.starter-actions { display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: center; }
+#save-starter { border: 1px solid var(--line); padding: 9px 13px; background: var(--paper); cursor: pointer; color: var(--ink); font-size: 12px; }
+#save-starter:hover { border-color: var(--red); }
+
+.arc-notes { margin: 0; max-width: 770px; margin-left: auto; }
+.arc-notes > div { display: grid; grid-template-columns: 180px 1fr; gap: 25px; padding: 18px 0; border-top: 1px solid var(--line); }
+.arc-notes dt { font-size: 14px; font-weight: 500; }
+.arc-notes dd { margin: 0; font-size: 13px; color: var(--muted); }
+@media (max-width: 620px) {
+  .arc-notes > div { grid-template-columns: 1fr; gap: 8px; }
+}

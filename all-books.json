@@ -151,7 +151,7 @@
   {"title": "Art of War", "author": "Sun Tzu", "slug": "art-of-war", "initials": "AW", "isbn": "9781590302255", "cover_url": null, "category": "Philosophy & Thought"},
   {"title": "Become What You Are", "author": "Alan Watts", "slug": "become-what-you-are", "initials": "BW", "isbn": "9781570629402", "cover_url": null, "category": "Philosophy & Thought"},
   {"title": "Tools for Conviviality", "author": "Ivan Illich", "slug": "tools-for-conviviality", "initials": "TC", "isbn": "9781842300114", "cover_url": null, "category": "Philosophy & Thought"},
-  {"title": "History as Art and as Science", "author": "Johan Huizinga", "slug": "history-as-art-and-science", "initials": "HA", "isbn": null, "cover_url": null, "category": "Philosophy & Thought"},
+  {"title": "History as Art and as Science", "author": "H. Stuart Hughes", "slug": "history-as-art-and-science", "initials": "HA", "isbn": null, "cover_url": null, "category": "Philosophy & Thought"},
   {"title": "A Study of History, Vol. 1", "author": "Arnold J. Toynbee", "slug": "study-of-history-vol-1", "initials": "SH", "isbn": "9780195050806", "cover_url": null, "category": "Philosophy & Thought"},
   {"title": "The Art of Not Being Governed", "author": "James C. Scott", "slug": "art-of-not-being-governed", "initials": "AG", "isbn": "9780300169171", "cover_url": null, "category": "Philosophy & Thought"},
   {"title": "The Philosophy of Elbert Hubbard", "author": "Elbert Hubbard", "slug": "philosophy-of-elbert-hubbard", "initials": "PH", "isbn": null, "cover_url": null, "category": "Philosophy & Thought"},
@@ -169,7 +169,7 @@
   {"title": "The Prize", "author": "Daniel Yergin", "slug": "the-prize", "initials": "PZ", "isbn": "9781439110126", "cover_url": null, "category": "Science, Technology & History"},
   {"title": "Only the Paranoid Survive", "author": "Andy Grove", "slug": "only-the-paranoid-survive", "initials": "PS", "isbn": "9780385483827", "cover_url": null, "category": "Science, Technology & History"},
   {"title": "Nuclear War", "author": "Annie Jacobsen", "slug": "nuclear-war", "initials": "NW", "isbn": "9780593476093", "cover_url": null, "category": "Science, Technology & History"},
-  {"title": "Token Supremacy", "author": "Zachary Small", "slug": "token-supremacy", "initials": "TS", "isbn": "9781668023723", "cover_url": null, "category": "Science, Technology & History"},
+  {"title": "Token Supremacy", "author": "Zachary Small", "slug": "token-supremacy", "initials": "TS", "isbn": "9780593536759", "cover_url": null, "category": "Science, Technology & History"},
   {"title": "Good Strategy, Bad Strategy", "author": "Richard Rumelt", "slug": "good-strategy-bad-strategy", "initials": "GS", "isbn": "9780307886231", "cover_url": null, "category": "Science, Technology & History"},
   {"title": "A Philosophy of Software Design", "author": "John Ousterhout", "slug": "philosophy-of-software-design", "initials": "SD", "isbn": "9781732102200", "cover_url": null, "category": "Science, Technology & History"},
   {"title": "Radical Markets", "author": "Eric Posner", "slug": "radical-markets", "initials": "RM", "isbn": "9780691177502", "cover_url": null, "category": "Science, Technology & History"},
@@ -191,7 +191,7 @@
   {"title": "All Things Are Possible", "author": "Lev Shestov", "slug": "all-things-are-possible", "initials": "AP", "isbn": null, "cover_url": null, "category": "Science, Technology & History"},
   {"title": "Conspiracy", "author": "Ryan Holiday", "slug": "conspiracy", "initials": "CN", "isbn": "9780735217652", "cover_url": null, "category": "Science, Technology & History"},
   {"title": "How to Actually Change Your Mind", "author": "Eliezer Yudkowsky", "slug": "how-to-actually-change-your-mind", "initials": "CM", "isbn": null, "cover_url": null, "category": "Science, Technology & History"},
-  {"title": "The Gospels", "author": "Sarah Ruden", "slug": "the-gospels", "initials": "GS", "isbn": "9780300248838", "cover_url": null, "category": "Science, Technology & History"},
+  {"title": "The Gospels", "author": "Sarah Ruden", "slug": "the-gospels", "initials": "GS", "isbn": "9780399592966", "cover_url": null, "category": "Science, Technology & History"},
   {"title": "High Growth Handbook", "author": "Elad Gil", "slug": "high-growth-handbook", "initials": "HG", "isbn": "9781732265103", "cover_url": null, "category": "Science, Technology & History"},
   {"title": "The Big Score", "author": "Michael S. Malone", "slug": "the-big-score", "initials": "BS", "isbn": null, "cover_url": null, "category": "Science, Technology & History"},
   {"title": "Infamous Scribblers", "author": "Eric Burns", "slug": "infamous-scribblers", "initials": "IS", "isbn": "9781586483340", "cover_url": null, "category": "Science, Technology & History"},
@@ -268,5 +268,5 @@
   {"title": "Interaction of Color", "author": "Josef Albers", "slug": "interaction-of-color", "initials": "IC", "isbn": "9780300179354", "cover_url": null, "category": "Arts & Culture"},
   {"title": "The Creative Act", "author": "Rick Rubin", "slug": "the-creative-act", "initials": "CA", "isbn": "9780593652886", "cover_url": null, "category": "Arts & Culture"},
   {"title": "The Artist's Way", "author": "Julia Cameron", "slug": "the-artists-way", "initials": "AW", "isbn": "9781585421473", "cover_url": null, "category": "Arts & Culture"},
-  {"title": "Reclaiming Art in the Age of Artifice", "author": "Austin Kleon", "slug": "reclaiming-art-age-of-artifice", "initials": "RA", "isbn": null, "cover_url": null, "category": "Arts & Culture"}
+  {"title": "Reclaiming Art in the Age of Artifice", "author": "J. F. Martel", "slug": "reclaiming-art-age-of-artifice", "initials": "RA", "isbn": "9781583945780", "cover_url": null, "category": "Arts & Culture"}
 ]

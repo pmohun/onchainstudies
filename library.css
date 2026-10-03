@@ -1,0 +1,26 @@
+/* Catalog layout using the homepage's shared bookshop colors and type. */
+.library-heading { padding: 40px 0 36px; border-block: 1px solid var(--line); }
+.library-heading .caption { margin-bottom: 22px; }
+.browse-title { color: var(--blue); font-size: clamp(52px, 7vw, 88px); }
+.browse-subtitle { max-width: 550px; margin-top: 24px; }
+.library-controls { margin-block: 30px; }
+.search-label { display: block; font-size: 12px; margin-bottom: 8px; }
+.book-search { width: min(100%, 540px); padding: 14px 16px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 0; }
+.category-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.filter-btn { padding: 8px 13px; font-size: 11px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; }
+.filter-btn:hover { border-color: var(--blue); color: var(--blue); }
+.filter-btn.active { background: var(--blue); border-color: var(--blue); color: var(--paper); }
+#book-count { margin-bottom: 25px; }
+#library-empty { margin-block: 35px 70px; }
+.book-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 38px 28px; padding-bottom: 65px; }
+.book-card { min-width: 0; }
+.book-card[hidden], #library-empty[hidden] { display: none; }
+.book-cover { height: 245px; display: flex; align-items: end; justify-content: start; border-bottom: 5px solid var(--yellow); padding-bottom: 0; margin-bottom: 17px; }
+.book-cover img { max-height: 100%; max-width: 100%; width: auto; object-fit: contain; }
+.book-cover-fallback { height: 100%; width: 100%; display: grid; place-items: center; padding: 20px; background: var(--flexoki-base-50); font: 24px/1.2 var(--font-title); color: var(--blue); }
+.book-title { font-size: 22px; line-height: 1.15; letter-spacing: -.02em; }
+.book-info .book-author { margin: 9px 0 7px; }
+.cluster-tag { color: var(--muted); font-size: 10px; }
+@media (max-width: 1100px) { .book-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 800px) { .book-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 20px; } .book-cover { height: 220px; } }
+@media (max-width: 620px) { .library-heading { padding-top: 28px; } .book-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 18px; } .book-cover { height: 210px; } .book-title { font-size: 20px; } .book-search { font-size: 16px; } }
