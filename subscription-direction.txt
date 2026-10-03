@@ -1,0 +1,63 @@
+WELL READ — concept direction
+
+Name: Well Read (selected by Phil)
+Tagline: Build a library worth reading.
+Positioning: Build a useful personal library without spending evenings researching what to read. Provisional first audience: busy founders. Curation connects choosing problems, building systems, and understanding human consequences. See positioning-pilot.txt for the current offer and pilot plan.
+Parent brand: A new chapter of Onchain Studies. Keep the existing catalog and clusters as evidence of taste, with membership as the homepage's primary action. The public service name is Well Read.
+Alternate names to consider: Earlier candidates: The Monthly Shelf, Shelf Notes, A Year in Books. These are creative candidates, not cleared trademarks or available domains.
+
+MINIMAL BRAND SYSTEM
+Flexoki by Steph Ango (https://stephango.com/flexoki): paper #FFFCF0; ink #100F0F; secondary background base-50 #F2F0E5; borders base-150 #DAD8CE; muted text base-700 #575653 (for contrast on tinted sections); primary accent blue-600 #205EA6, with blue-700 #1A4F8C hover. Yellow-150 #F1D67E carries the shelf edge and hero CTA; yellow-50 #FAEEC6 carries the field-guide insert and library window. See FLEXOKI-LICENSE.txt.
+Selected Bookshop direction: Fraunces for headlines and wordmark; DM Sans for body and controls. Georgia and system sans fallbacks.
+A plain wordmark, Flexoki paper and ink, unfiltered library photographs, and book covers shown straight on. Use plain headings and short personal copy; avoid ornamental numbering, monograms, slogans, and staged paper notes.
+Voice: personal, curious, specific. Write as Phil. Avoid status claims and generic claims about smart readers.
+Primary CTA: Start building your shelf. Until the offer is finalized, label the actual signup button as a preview.
+
+OFFER ASSUMPTIONS — NOT LAUNCH COMMITMENTS
+$360/year ($30 per monthly delivery), paid upfront; 12 books and 12 one-page field guides, plus an immediate digital starter shelf; US shipping included. Check acquisition costs, packaging, postage, processing fees, tax treatment, and time before approving this price.
+Confirm whether recipients get purchased copies of collection titles or actual used copies, edition/condition expectations, dispatch date, launch date, substitutions, shipping territory, refund policy, and renewal terms.
+Social proof: the source catalog contains 270 entries across seven category labels. These show depth of curation, not subscriber satisfaction. Replace or supplement the curator section with permissioned, verified testimonials before launch. Do not imply the previous celebrity avatars are customers or endorsers; the former 200+ waitlist figure was not verified.
+
+BILLING FLOW
+1. Landing page -> annual offer with total annual charge and renewal frequency.
+2. Short reading quiz -> secure capture and manual curator review -> payment/shipping with full total and renewal terms. The on-page quiz is currently local only; implement the profile/payment handoff before enabling a Stripe Payment Link.
+3. Verified successful payment -> immediate digital starter shelf, receipt, and confirmation of first dispatch window and remaining delivery schedule. Do not infer successful payment solely from a browser redirect.
+4. Stripe Customer Portal -> invoices, payment method updates, cancellation of next renewal. Cancellation preserves the remainder of the already-paid year's deliveries, subject to final refund policy.
+5. Shipping address changes -> contact Phil initially. Ensure fulfillment uses the shipping address; billing address changes are not automatically fulfillment updates.
+
+IMPLEMENTATION / LAUNCH
+The landing page is static HTML/CSS. The starter quiz produces fixed example reading lists locally. The signup dialog validates name, email, and preview consent. It neither sends nor stores information and takes no payments.
+Use a Stripe annual recurring product and Payment Link for the smallest initial integration. Enable shipping collection for approved countries, receipts, and customer portal access; prevent unintended duplicate subscriptions. Verify in Stripe test mode before live launch.
+Set SUBSCRIPTION_PAYMENT_LINK in subscription.js to an approved https://buy.stripe.com URL. At the same time remove preview disclosures, change the button to Subscribe, and replace all provisional offer/FAQ copy with approved policies. Configure the actual annual amount in Stripe, not in browser JavaScript. Never add secret keys to frontend files.
+Keep a fulfillment ledger per member: paid membership period, shipping address, twelve monthly dispatches, book title, and shipment status. Annual billing alone does not schedule twelve shipments. For a small first cohort this can be manual; automation later should use verified Stripe events and idempotent processing. Track renewals, failed payments, refunds, and cancellations before adding paid members to shipment batches.
+Before launch add real testimonials with permission, published refund/privacy/renewal terms, and a checkout confirmation page. Confirm failed-payment handling and that cancellation and shipping updates work in practice.
+
+Stripe references:
+https://stripe.com/payments/payment-links
+https://docs.stripe.com/api/payment_links/payment_links/object
+https://docs.stripe.com/payments/checkout/limit-subscriptions
+https://support.stripe.com/questions/billing-customer-portal
+
+HISTORIC LIBRARY PHOTOGRAPHY
+Use actual photographs as editorial inspiration for building a collection. Pair each room with its owner, place, primary historical source, photographer, and image license. These libraries are inspiration, not customer endorsements. Keep the monthly offer and sample books clear alongside them.
+Edith Wharton: The Mount, Lenox. Photograph by Magicpiano, 2013, CC BY-SA 3.0.
+Pierpont Morgan: New York private library completed in 1906. Photograph by Pingthing, 2015, CC BY-SA 4.0.
+Photo sources and license details: images/libraries/credits.txt. Natural color, no filters or cropping; photographs retain their original aspect ratios and link to their sources.
+
+TYPOGRAPHY COMPARISON
+A floating “Try the fonts” control switches five title/body pairings across the landing page. Selection persists in localStorage on this browser; no preference is transmitted. The chooser uses native radio controls for keyboard interaction, announces changes, and can be closed with Escape.
+01 Editorial: Libre Caslon Display + DM Sans — an alternate pairing.
+02 Literary: EB Garamond + Source Sans 3 — strongest alternative for a traditional bookish identity.
+03 Warm: Lora + Inter — sturdy and welcoming.
+04 Bookshop: Fraunces + DM Sans — the selected default for round two.
+05 Journal: Newsreader + Work Sans — contemporary editorial tone.
+Implementation: font-picker.js, font-picker.css; page fonts use --font-title and --font-body in bookshop.css. Font families load via Google Fonts with display=swap. Picker typography stays stable while the page changes.
+
+PAGE REFINEMENT
+The landing page now reads as a personal book subscription: a short introduction, Wharton’s library photograph, three books with specific descriptions, a short note on personal libraries and Morgan’s photograph, the annual offer, and practical questions. The old tilted book collage, statistic strip, numbered marketing sections, founder monogram, tinted cards, and repeated slogans have been removed. Font picker retains all five pairings and migrates any previously saved preference.
+
+Current positioning, selection criteria, field-guide format, acquisition tests, and live quiz/payment requirements are detailed in positioning-pilot.txt.
+
+The current arc is pay attention, examine systems, keep people in view, and make the shelf your own. It is a draft editorial structure, not a fixed shipping schedule. The guide now includes a personal reflection prompt. Presale, inventory, and annual fulfillment commitments are covered in positioning-pilot.txt.
+
+The selected Bookshop implementation and review are documented in design/sprint-brief.txt. Current homepage stylesheet: bookshop.css. The original monthly-shelf.css is an unused earlier iteration.

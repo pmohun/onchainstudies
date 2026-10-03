@@ -1,0 +1,220 @@
+/* Well Read / Bookshop, round two.
+   Flexoki by Steph Ango — https://stephango.com/flexoki (MIT). */
+:root {
+  --font-title: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --flexoki-paper: #FFFCF0;
+  --flexoki-black: #100F0F;
+  --flexoki-base-50: #F2F0E5;
+  --flexoki-base-100: #E6E4D9;
+  --flexoki-base-150: #DAD8CE;
+  --flexoki-base-200: #CECDC3;
+  --flexoki-base-700: #575653;
+  --flexoki-blue-600: #205EA6;
+  --flexoki-blue-700: #1A4F8C;
+  --flexoki-yellow-50: #FAEEC6;
+  --flexoki-yellow-150: #F1D67E;
+  --paper: var(--flexoki-paper);
+  --ink: var(--flexoki-black);
+  --muted: var(--flexoki-base-700);
+  --line: var(--flexoki-base-150);
+  --blue: var(--flexoki-blue-600);
+  --yellow: var(--flexoki-yellow-150);
+  --accent: var(--blue);
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 28px; }
+body { margin: 0; color: var(--ink); background: var(--paper); font: 15px/1.65 var(--font-body); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+button, input, select { font: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.wrap { width: min(1240px, calc(100% - 80px)); margin-inline: auto; }
+p, h1, h2, h3, figure { margin: 0; }
+h1, h2, h3 { font-family: var(--font-title); font-weight: 400; }
+h1 { font-size: clamp(58px, 7.7vw, 106px); line-height: .98; letter-spacing: -.055em; }
+h2 { color: var(--blue); font-size: 50px; line-height: 1.02; letter-spacing: -.035em; }
+h3 { font-size: 29px; line-height: 1.1; letter-spacing: -.025em; }
+img { display: block; max-width: 100%; height: auto; }
+.masthead { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 32px 0; }
+.wordmark { font: 52px/.95 var(--font-title); letter-spacing: -.055em; color: var(--blue); text-decoration: none; white-space: nowrap; }
+nav { display: flex; gap: 32px; font-size: 12px; }
+nav a { text-decoration: none; }
+.storefront { background: var(--blue); color: var(--paper); padding: 42px 40px 0; }
+.storefront :focus-visible { outline-color: var(--yellow); }
+.shop-meta { display: flex; justify-content: space-between; gap: 24px; font-size: 11px; margin-bottom: 27px; }
+.hero-bottom { display: grid; grid-template-columns: .7fr 1.3fr; gap: 45px; align-items: end; margin-top: 36px; }
+.shop-offer { padding-bottom: 38px; }
+.shop-offer p { max-width: 290px; font-size: 14px; }
+.shop-offer small { display: block; font-size: 10px; margin-top: 13px; }
+.button { background: var(--blue); color: var(--paper); border: 0; display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; padding: 14px 22px; font: 12px/1.4 var(--font-body); text-decoration: none; cursor: pointer; }
+.button:hover { background: var(--flexoki-blue-700); text-decoration: none; }
+.hero-button { background: var(--yellow); color: var(--ink); margin-top: 24px; }
+.hero-button:hover { background: var(--flexoki-yellow-50); }
+.shelf { display: flex; align-items: end; justify-content: center; gap: clamp(18px, 3vw, 38px); border-bottom: 12px solid var(--yellow); padding: 20px 20px 0; position: relative; bottom: -12px; }
+.shelf a { display: block; width: 28%; max-width: 155px; }
+.shelf a:nth-child(2) { width: 30%; max-width: 172px; }
+.shelf img { width: 100%; box-shadow: 4px 1px 0 #100F0F22; }
+.shop-label { display: flex; justify-content: space-between; gap: 20px; padding: 28px 0 16px; border-bottom: 1px solid var(--line); font-size: 11px; }
+.shop-story, .section-intro { display: grid; grid-template-columns: .85fr 1.15fr; gap: 65px; }
+.shop-story { padding: 56px 0 42px; }
+.shop-story p { font-size: 17px; max-width: 590px; }
+.shop-story p + p { margin-top: 18px; }
+.selection { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; }
+.book-entry { border-top: 3px solid var(--blue); padding-top: 16px; }
+.book-entry .book-question { color: var(--blue); font-size: 11px; font-weight: 500; margin-bottom: 13px; }
+.book-entry h3 { max-width: 350px; }
+.book-author { font-size: 11px; color: var(--muted); margin: 10px 0 18px; }
+.book-entry p:not(.book-question):not(.book-author) { font-size: 13px; max-width: 350px; }
+.book-source { display: inline-block; font-size: 11px; margin-top: 16px; }
+.caption, .credit { font-size: 11px; line-height: 1.7; color: var(--muted); }
+.selection-caption { margin-top: 26px; }
+.guide-section { margin-top: 58px; padding-top: 36px; border-top: 1px solid var(--line); }
+.section-intro { margin-bottom: 30px; }
+.section-intro p + p { margin-top: 16px; }
+.section-intro > div { max-width: 590px; }
+.field-guide { padding: 0 28px; background: var(--flexoki-yellow-50); }
+.field-guide summary { padding: 22px 0; color: var(--ink); }
+.field-guide article { max-width: 730px; padding: 10px 0 26px; }
+.field-guide h3 { font-size: 36px; margin: 15px 0 25px; }
+.field-guide p { font-size: 14px; margin-bottom: 18px; }
+.field-guide .caption { font-size: 11px; }
+.field-guide strong { font-weight: 500; }
+.library-window { display: grid; grid-template-columns: 1.35fr .65fr; background: var(--flexoki-yellow-50); margin-top: 65px; }
+.library-window figure { min-width: 0; }
+.library-window img { height: 100%; min-height: 390px; width: 100%; object-fit: cover; }
+.window-note { padding: 34px; display: flex; flex-direction: column; justify-content: center; align-items: start; }
+.window-note h2 { font-size: 43px; }
+.window-note > p { font-size: 13px; margin-top: 20px; }
+.window-note .credit { font-size: 10px; }
+.text-link { font-size: 11px; margin-top: 20px; }
+.section { margin-top: 60px; padding-top: 36px; border-top: 1px solid var(--line); }
+.year-story .section-intro { margin-bottom: 0; }
+.starter { padding: 32px 34px; background: var(--flexoki-base-50); border: 0; }
+.starter h2 { font-size: 46px; }
+.quiz-fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 24px; }
+form label { display: block; font-size: 12px; margin: 12px 0 8px; }
+.quiz-fields label { min-height: 40px; }
+form input:not([type=checkbox]), form select { width: 100%; padding: 12px; border: 1px solid var(--flexoki-base-200); background: var(--paper); color: var(--ink); border-radius: 0; font-size: 13px; }
+#starter-result { margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--flexoki-base-200); max-width: 730px; }
+#starter-result[hidden] { display: none; }
+#starter-result h3 { color: var(--blue); margin-bottom: 16px; }
+#starter-rationale { font-size: 14px; }
+#starter-books { list-style: none; padding: 0; margin: 25px 0; }
+#starter-books li { display: flex; align-items: start; gap: 20px; margin-bottom: 24px; }
+#starter-books img { width: 55px; height: auto; }
+#starter-books strong { font-size: 14px; font-weight: 500; }
+#starter-books span { display: block; font-size: 11px; color: var(--muted); }
+#starter-books p { font-size: 13px; margin: 7px 0 0; }
+#starter-result .caption { margin-bottom: 16px; }
+.starter-actions { display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: center; }
+#save-starter { border: 1px solid var(--blue); padding: 10px 14px; background: transparent; cursor: pointer; color: var(--blue); font-size: 12px; }
+#save-starter:hover { background: var(--paper); }
+.join-link { color: var(--blue); font-size: 12px; }
+.membership { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; border-top: 3px solid var(--blue); }
+.membership-offer { max-width: 510px; }
+.membership-offer > p:first-child { font-size: 16px; }
+.price { color: var(--blue); font: 50px/1.2 var(--font-title); letter-spacing: -.04em; margin: 22px 0 10px; }
+.price span { color: var(--muted); font: 12px var(--font-body); letter-spacing: 0; margin-left: 8px; }
+.membership-offer .button { margin-top: 22px; }
+.membership-disclosure { margin-top: 13px; }
+.questions { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+.questions h2 { font-size: 40px; }
+.question-list details { border-bottom: 1px solid var(--line); }
+.question-list details:first-child { border-top: 1px solid var(--line); }
+summary { cursor: pointer; font-size: 13px; padding: 16px 0; }
+.question-list p { font-size: 13px; color: var(--muted); padding-bottom: 20px; }
+.library-postscript { margin: 65px 0 0 auto; width: 66%; }
+.library-postscript img { width: 100%; }
+.library-postscript figcaption { display: flex; justify-content: space-between; gap: 20px; font-size: 10px; color: var(--muted); padding-top: 12px; }
+.library-postscript > p { margin-top: 12px; }
+.personal-signoff { font-size: 13px; margin: 48px 0 60px; }
+.personal-signoff span { display: inline-block; margin-top: 12px; }
+footer { display: flex; align-items: baseline; gap: 28px; border-top: 1px solid var(--line); padding: 26px 0 90px; color: var(--muted); font-size: 10px; }
+footer span:first-child { flex: 1; }
+dialog { border: 1px solid var(--line); background: var(--paper); color: var(--ink); width: min(520px, calc(100% - 30px)); max-height: 90dvh; overflow: auto; padding: 34px; }
+dialog::backdrop { background: #100F0F88; }
+dialog h2 { color: var(--blue); font-size: 37px; margin-bottom: 15px; }
+dialog > p { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+.eyebrow { font-size: 10px; letter-spacing: .08em; }
+.close { position: absolute; top: 10px; right: 12px; border: 0; background: transparent; color: var(--ink); font-size: 25px; cursor: pointer; }
+.order-total { display: flex; justify-content: space-between; gap: 20px; border-block: 1px solid var(--line); padding: 16px 0; margin: 22px 0; font-size: 13px; }
+.fine-print { font-size: 10px; color: var(--muted); margin-top: 16px; }
+form .consent { display: flex; align-items: start; gap: 9px; font-size: 11px; margin-block: 18px; }
+.consent input { margin: 4px 0 0; }
+#checkout-form .button { width: 100%; }
+#checkout-status { font-size: 12px; color: var(--blue); margin-top: 16px; }
+@media (max-width: 950px) {
+  .wrap { width: calc(100% - 48px); }
+  .storefront { padding: 32px 28px 0; }
+  .hero-bottom { gap: 25px; }
+  .shelf { padding-inline: 0; gap: 22px; }
+  .shop-story, .section-intro, .membership, .questions { gap: 35px; }
+  .selection { gap: 25px; }
+  .window-note { padding: 26px; }
+  .window-note h2 { font-size: 35px; }
+  .quiz-fields { gap: 16px; }
+  .starter { padding: 28px; }
+  .library-postscript { width: 80%; }
+}
+@media (max-width: 620px) {
+  .wrap { width: calc(100% - 32px); }
+  .masthead { padding: 25px 0; gap: 16px; }
+  .wordmark { font-size: 40px; }
+  nav { gap: 16px; font-size: 11px; }
+  nav a:first-child { display: none; }
+  .storefront { padding: 27px 22px 0; }
+  .shop-meta { font-size: 9px; gap: 18px; margin-bottom: 24px; }
+  .shop-meta span:first-child { max-width: 130px; }
+  h1 { font-size: clamp(43px, 12.9vw, 65px); line-height: 1; }
+  h2 { font-size: 43px; }
+  .hero-bottom { grid-template-columns: 1fr; gap: 0; margin-top: 26px; }
+  .shop-offer { padding-bottom: 4px; }
+  .shop-offer p { max-width: 350px; }
+  .shelf { padding-top: 34px; gap: 18px; }
+  .shelf a, .shelf a:nth-child(2) { width: 29%; }
+  .shop-label { font-size: 10px; padding-top: 28px; }
+  .shop-story, .section-intro, .membership, .questions { grid-template-columns: 1fr; gap: 24px; }
+  .shop-story { padding: 40px 0 32px; }
+  .shop-story p { font-size: 16px; }
+  .selection { grid-template-columns: 1fr; gap: 28px; }
+  .book-entry h3 { font-size: 32px; }
+  .book-entry p:not(.book-question):not(.book-author) { max-width: none; }
+  .guide-section, .section { margin-top: 40px; padding-top: 28px; }
+  .field-guide { padding-inline: 20px; }
+  .field-guide summary { font-size: 12px; }
+  .field-guide h3 { font-size: 31px; }
+  .library-window { grid-template-columns: 1fr; margin-top: 40px; }
+  .library-window img { min-height: 0; height: auto; aspect-ratio: 1.5; object-fit: cover; }
+  .window-note { padding: 26px; }
+  .window-note h2 { font-size: 40px; }
+  .starter { padding: 26px 20px; }
+  .starter h2 { font-size: 39px; }
+  .quiz-fields { grid-template-columns: 1fr; gap: 12px; }
+  .quiz-fields label { min-height: 0; }
+  form input:not([type=checkbox]), form select { font-size: 16px; }
+  .membership { border-top-width: 3px; }
+  .membership h2 { font-size: 44px; }
+  .questions h2 { font-size: 37px; }
+  .library-postscript { width: 100%; margin-top: 40px; }
+  .library-postscript figcaption { display: block; font-size: 9px; }
+  .library-postscript figcaption span { display: block; margin-bottom: 4px; }
+  .personal-signoff { margin-block: 36px; }
+  footer { flex-wrap: wrap; gap: 12px 20px; }
+  footer span:first-child { flex-basis: 100%; }
+  dialog { padding: 28px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+/* Long quiz options must not force the three-column grid wider than its page. */
+.quiz-fields > div { min-width: 0; }
+.quiz-fields select { min-width: 0; }
+.membership-offer ul { padding-left: 20px; margin-block: 20px; font-size: 14px; }
+.starter .quiz-fields { grid-template-columns: minmax(0, 1fr); max-width: 540px; }
+/* Share row heights so descriptions align beneath titles of different lengths. */
+@media (min-width: 621px) {
+  .selection { row-gap: 0; }
+  .book-entry { display: grid; grid-template-rows: subgrid; grid-row: span 5; }
+  .book-entry .book-source { align-self: start; justify-self: start; }
+}
+#signup-note { margin-top: 14px; }
+#signup-status { margin-top: 14px; font-size: 13px; color: var(--blue); }

@@ -1,0 +1,79 @@
+WELL READ — POSITIONING AND FIRST PILOT
+
+WORKING AUDIENCE
+Busy founders who want to read beyond business advice and build a serious personal library. This is a provisional first niche for Phil to approve, rather than a claim about existing members. Keep Well Read as the selected name; the offer does the explaining.
+
+PROMISE
+Build a considered personal library without spending your evenings researching what to read.
+An ongoing reading arc, expressed through one monthly book and a one-page field guide. A starter shelf and outline of the year provide the first value immediately. The identity is a reader building a personal canon through use, reflection, and disagreement; Phil supplies a point of view and the reader develops their own.
+
+EDITORIAL THESIS — FOR PHIL TO REVIEW
+A library about choosing worthwhile problems, building systems, and understanding the human consequences. Connect technical work, history, and literature. A sequence should have a reason to exist beyond each book’s individual popularity. This is a proposed interpretation of the existing collection, not a fabricated statement of Phil’s lived beliefs or a guarantee of improved judgment.
+
+VALUE EQUATION
+Outcome: a coherent personal library the reader uses and revisits.
+Likelihood: publish the selection criteria and a complete field-guide example; let people inspect Phil’s collection and a proposed sequence. Real customer evidence must come from the pilot.
+Time to value: starter shelf immediately, before the first parcel. The free site preview already produces a reading list without asking for email.
+Effort: one short quiz, manual curator review, one monthly delivery. No reading deadline. Clearly name long/demanding selections and unsuitable readers. A founder should not receive a substantial novel under a promise of a quick read.
+
+SELECTION TEST
+Why this book: what does it add that the shelf lacks?
+Why now: what question is the member working through; which earlier book does it extend or challenge?
+Who it is for: who benefits, what background it needs, and when to skip it.
+Connection: name at least one neighbor on the existing shelf.
+Durability: is there a reason to return to it after the first reading?
+Avoid treating prestige, beautiful spines, bestseller status, or social identity as the rationale.
+
+FIELD GUIDE — ONE PAGE, WRITTEN BY PHIL
+Book/title/author; why it belongs; why now; who it suits and who should skip it; a way into the book; one question to take away; the other books it connects to.
+A complete Seeing Like a State example appears on the page and is marked as a draft for Phil’s review. It is original editorial commentary, not a reproduced book excerpt.
+
+STARTER QUIZ
+Three questions: current question, reading commitment, previously owned sample books.
+The site preview uses fixed sequences and excludes marked sample titles. It is explicitly labeled as an example, not a live personal recommendation. It creates a downloadable plain-text reading list. Quiz answers are neither transmitted nor persisted. The checkout dialog can display the local starting point, but no application is submitted.
+For a live pilot, capture the quiz securely and link it to the paying member. Phil reviews existing books and reading capacity manually; do not promise individualized curation while only offering fixed automatic results. Ask about additional owned titles in the manual follow-up.
+
+FIRST PILOT — PROPOSED, NOT AN ANNOUNCED LAUNCH
+Recruit 10–15 founders who are willing to speak candidly about their reading. Begin manually. Before accepting payment, finalize copies/condition, price, shipping, dispatch date, refunds, privacy, renewal terms, and duplicate/substitution handling.
+Ask what they already read, why they trust Phil (or don’t), and what library they wish they had. Send a starting sequence and one actual field guide for review. Personally inspect each parcel and its note.
+Collect evidence after delivery: what they read, what they returned to, whether the connection between books was useful, and whether the guide justified the choice. Ask again after three books; do not treat an attractive unboxing as proof of retained value.
+Request permission before using customer quotes. Publish only genuine subscriber feedback and distinguish paid members from interested readers.
+
+ACQUISITION TESTS — NO POSTS OR MESSAGES SENT
+Test three short videos about an actual book and its neighbors:
+1. Trust: Phil explaining one specific selection and a reader it would not suit.
+2. Point of view: why Hamming, Scott, and Steinbeck belong together; invite disagreement.
+3. Product: film the real parcel and read part of the one-page guide. No staged customer praise.
+Use one audience and one offer at a time. Link to the starter quiz or pilot signup. Track qualified interest, paid pilot purchases, and three-delivery retention. Ask whether readers can explain the curation thesis in their own words.
+
+PROMOTIONS AND BILLING
+The existing $360 annual concept remains provisional; no discount or live charge has been configured. Annual payment is $360 upfront, not a monthly stepped price.
+To test first-box pricing or first-three-box discounts, use a separate pilot offer with its complete payment schedule and renewal/commitment terms disclosed before purchase. Establish book acquisition, postage, packaging, payment fees, guide-writing time, and replacement costs first. Do not display a discount against a price you have not actually offered.
+A first-box trial can test willingness to pay without a yearlong commitment. Compare the feedback with annual interest; avoid changing audience, price, and selection thesis simultaneously. Do not implement monthly step-up pricing on the current annual checkout.
+
+LIVE PAYMENT / FULFILLMENT REQUIREMENTS
+Landing -> quiz -> curator starting point -> payment/shipping -> immediate digital starter shelf -> monthly dispatches.
+The static site currently supports only the quiz and preview. A production flow needs secure profile capture, verified payment status, delivery of the immediate digital shelf, a member/fulfillment ledger, shipping updates, subscription lifecycle handling, and confirmation emails. Never use a successful-looking browser redirect as evidence of payment.
+The minimal Stripe Payment Link can handle annual billing, but cannot by itself preserve the on-page quiz answers or deliver personalized digital content. Implement that handoff before enabling the payment link. No live billing, publishing, customer recruitment, or outbound content has been performed.
+
+BOOK CONTENT SOURCES
+https://press.stripe.com/the-art-of-doing-science-and-engineering
+https://yalebooks.yale.edu/book/9780300252989/seeing-like-a-state/
+https://www.penguinrandomhouse.com/books/541274/east-of-eden-by-john-steinbeck/
+Historical libraries remain supporting imagery; they are neither customer proof nor a promise of a prestigious collection.
+
+THE YEAR AS AN EDITORIAL ARC — DRAFT
+Pay attention -> examine the systems -> keep people in view -> make the shelf your own. These are questions that recur across the year, not four invented shipping dates. Each monthly guide should make clear which question it advances, which earlier book it extends or challenges, and why this installment arrives now. Twelve parcels should accumulate into a coherent collection.
+The physical book is the durable artifact; the guide carries the narrative; the member’s notes make the canon personal. Do not tell members what kind of person they will become or suggest possession confers sophistication. Ask what they notice, keep, reread, and disagree with.
+
+PRESALE AND CAPITAL DISCIPLINE — PROPOSED OPERATING RULES
+Start with the 10–15-person founder cohort. Publish the first arc, opening title, actual guide, payment schedule, and dispatch dates before accepting money. Presell confirmed places; do not claim that a cohort is sold out or limited before it is actually organized.
+Confirm availability and lead times with book suppliers before setting the dispatch promise. Purchase against paid, confirmed orders, plus a small replacement allowance based on supplier reliability. Avoid a speculative twelve-month inventory purchase. Maintain a shortlist of editorially acceptable substitutions and communicate any change.
+An annual presale funds a year of obligations. Allocate money to the remaining eleven deliveries, packaging/postage, replacements, taxes/fees, and any applicable refunds before treating the first payment as profit. Track these commitments per member. No target margin is asserted before actual costs are known.
+Keep one common editorial arc and a small number of manually chosen branches for reading pace and already-owned books. Do not launch unlimited individual sourcing or customization. Measure Phil’s minutes per guide, member review, sourcing, and shipment to understand the viable cohort size.
+Phil controls the selections, field-guide writing, and substitutions. Let automation handle administrative steps only after the manual flow works. Outsourced fulfillment is a later decision, based on demonstrated demand and economics.
+
+WHAT TO LEARN FROM THE COHORT
+Ask open questions before presenting categories: what made this worth paying for, and what would make you stop? Then distinguish surprise, usefulness, beauty, status, and belonging in the responses. These are possible motivations to learn about, not invented segments or promises.
+At each delivery, ask whether the selection’s place in the arc was clear. After three deliveries, ask members to explain the connection between two books without reading the guide. After the year, ask which books they returned to and how they would describe their shelf. Log actual answers; do not turn ownership alone into a claimed learning outcome.
+Belonging can emerge from shared questions. Do not promise a community, live events, or discussion programming until someone is responsible for delivering them.

@@ -1,273 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6LE2564SS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Z6LE2564SS');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onchain Studies</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Well Read — Build a library worth reading</title>
+<meta name="description" content="Build a personal library beyond business books. A three-book introduction with field guides, curated by Phil Mohun.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Fraunces:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@400;500;600;700&amp;family=Libre+Caslon+Display&amp;family=Lora:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,400;0,500;1,400&amp;family=Source+Sans+3:wght@400;500;600;700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bookshop.css">
+<link rel="stylesheet" href="font-picker.css">
+<script src="font-picker.js" defer></script>
+<script src="subscription.js" defer></script>
+<script src="starter-shelf.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="/" class="nav-logo">Onchain Studies</a>
-            <div class="nav-links">
-                <a href="/library.html">Library</a>
-                <a href="/clusters.html">Clusters</a>
-                <a href="/about.html">About</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <header class="hero">
-        <div class="container">
-            <p class="pulse"><span class="pulse-dot"></span>Coming Q3 2026</p>
-            <h1>How the smartest people<br> actually read</h1>
-            <p class="subheader">Subscribe and join a community of readers that receive a handcrafted package of beautiful books each quarter, curated from different disciplines around one big idea.</p>
-            <form class="signup" id="signup-form-hero">
-                <input type="email" placeholder="Your email address" class="signup-input" required />
-                <button type="submit" class="signup-btn">Join the waitlist</button>
-            </form>
-            <p class="signup-message" id="signup-message-hero"></p>
-            <div class="social-proof">
-                <div class="avatar-stack">
-                    <img src="https://unavatar.io/x/philmohun" alt="" class="avatar">
-                    <img src="https://unavatar.io/x/naval" alt="" class="avatar">
-                    <img src="https://unavatar.io/x/patrickc" alt="" class="avatar">
-                    <img src="https://unavatar.io/x/tylercowen" alt="" class="avatar">
-                    <img src="https://unavatar.io/x/david_perell" alt="" class="avatar">
-                </div>
-                <span>Join 200+ readers on the waitlist</span>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- Current Quarter Drop -->
-        <section class="quarter-drop">
-            <div class="container">
-                <div class="quarter-drop-header">
-                    <h2 class="section-title">Q3 2026 Drop</h2>
-                    <p class="quarter-drop-title">Taste, Judgment, and Selection</p>
-                    <p class="quarter-drop-desc">I've been thinking about taste and selection in the age of AI. As a society, we are so obsessed with numbers. And for good reason &mdash; they reduce the unbearable complexity of our world into something that feels controllable. But judgment starts where numbers end, and that skill isn't going away even as intelligence becomes more abundant. These ten books are about developing and eventually learning to trust your intuition.</p>
-                    <p class="quarter-drop-curator">Phil Mohun, curator</p>
-                </div>
-
-                <div class="book-grid quarter-drop-grid">
-                    <!-- Revealed books -->
-                    <div class="book-card">
-                        <div class="book-cover"><img src="covers/war-of-art.jpg" alt="The War of Art"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">The War of Art</h3>
-                            <p class="book-author">Steven Pressfield</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <div class="book-cover"><img src="covers/ways-of-seeing.jpg" alt="Ways of Seeing"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">Ways of Seeing</h3>
-                            <p class="book-author">John Berger</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <div class="book-cover"><img src="covers/the-creative-act.jpg" alt="The Creative Act"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">The Creative Act</h3>
-                            <p class="book-author">Rick Rubin</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <div class="book-cover"><img src="covers/skin-in-the-game.jpg" alt="Skin in the Game"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">Skin in the Game</h3>
-                            <p class="book-author">Nassim Nicholas Taleb</p>
-                        </div>
-                    </div>
-
-                    <!-- Blurred books -->
-                    <div class="book-card book-card--blurred">
-                        <div class="book-cover"><img src="covers/distinction.jpg" alt="Distinction"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">Distinction</h3>
-                            <p class="book-author">Pierre Bourdieu</p>
-                        </div>
-                    </div>
-                    <div class="book-card book-card--blurred">
-                        <div class="book-cover"><img src="covers/art-of-doing-science-and-engineering.jpg" alt="The Art of Doing Science and Engineering"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">The Art of Doing Science and Engineering</h3>
-                            <p class="book-author">Richard Hamming</p>
-                        </div>
-                    </div>
-                    <div class="book-card book-card--blurred">
-                        <div class="book-cover"><img src="covers/mans-search.jpg" alt="Man's Search for Meaning"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">Man's Search for Meaning</h3>
-                            <p class="book-author">Viktor Frankl</p>
-                        </div>
-                    </div>
-                    <div class="book-card book-card--blurred">
-                        <div class="book-cover"><img src="covers/range.jpg" alt="Range"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">Range</h3>
-                            <p class="book-author">David Epstein</p>
-                        </div>
-                    </div>
-                    <div class="book-card book-card--blurred">
-                        <div class="book-cover"><img src="covers/thinking-fast-and-slow.jpg" alt="Thinking, Fast and Slow"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">Thinking, Fast and Slow</h3>
-                            <p class="book-author">Daniel Kahneman</p>
-                        </div>
-                    </div>
-                    <div class="book-card book-card--blurred">
-                        <div class="book-cover"><img src="covers/bird-by-bird.jpg" alt="Bird by Bird"></div>
-                        <div class="book-info">
-                            <h3 class="book-title">Bird by Bird</h3>
-                            <p class="book-author">Anne Lamott</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="/clusters.html" class="quarter-drop-link">See all 12 clusters &rarr;</a>
-            </div>
-        </section>
-
-        <!-- How It Works -->
-        <section class="how-it-works">
-            <div class="container">
-                <h2 class="section-title">How It Works</h2>
-                <div class="steps">
-                    <div class="step">
-                        <span class="step-number">01</span>
-                        <h3 class="step-title">Subscribe</h3>
-                        <p class="step-desc">Sign up and claim your spot. Each quarter brings a new cluster of 10 books, curated across disciplines around a single theme.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-number">02</span>
-                        <h3 class="step-title">Receive your books</h3>
-                        <p class="step-desc">Ten physical books arrive at your door each quarter. No summaries, no PDFs. Books you actually want on your shelf.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-number">03</span>
-                        <h3 class="step-title">Join the conversation</h3>
-                        <p class="step-desc">A quarterly discussion with readers who care about ideas across fields. Show up, share what you noticed, hear what you missed.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quote -->
-        <section class="quote-section">
-            <div class="container">
-                <blockquote class="pull-quote">
-                    <p>"If you haven't read hundreds of books, you are functionally illiterate, and you will be incompetent, because your personal experiences alone aren't broad enough to sustain you."</p>
-                    <cite>— Jim Mattis</cite>
-                </blockquote>
-                <blockquote class="pull-quote">
-                    <p>"You must know all the big ideas in all the disciplines more fundamental than your own. You don't have to be an expert, but you have to know the big ideas."</p>
-                    <cite>— Charlie Munger</cite>
-                </blockquote>
-                <blockquote class="pull-quote">
-                    <p>"Read what you love until you love to read. It's that simple. You don't build a reading habit by reading books you don't enjoy."</p>
-                    <cite>— Naval Ravikant</cite>
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- Final CTA -->
-        <section class="final-cta">
-            <div class="container">
-                <h2>Your next cluster is waiting</h2>
-                <form class="signup" id="signup-form-footer">
-                    <input type="email" placeholder="Your email address" class="signup-input" required />
-                    <button type="submit" class="signup-btn">Join the waitlist</button>
-                </form>
-                <p class="signup-message" id="signup-message-footer"></p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Onchain Studies</p>
-        </div>
-    </footer>
-
-    <script>
-    var SUPABASE_URL = 'https://aoblvnaztcxpfhjasfkz.supabase.co';
-    var SUPABASE_KEY = 'sb_publishable_1KFiZSZOkvn9otVkF6hlag_Vq8uQ05o';
-
-    function showMessage(msg, text, type) {
-        msg.textContent = text;
-        msg.className = 'signup-message signup-message--visible signup-message--' + type;
-    }
-
-    function resetBtn(btn) {
-        btn.disabled = false;
-        btn.classList.remove('signup-btn--loading', 'signup-btn--success');
-        btn.textContent = 'Join the waitlist';
-    }
-
-    function submitWaitlist(formId, messageId) {
-        var form = document.getElementById(formId);
-        var msg = document.getElementById(messageId);
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var emailInput = form.querySelector('.signup-input');
-            var btn = form.querySelector('.signup-btn');
-            var email = emailInput.value;
-
-            btn.disabled = true;
-            btn.classList.add('signup-btn--loading');
-            msg.className = 'signup-message';
-
-            fetch(SUPABASE_URL + '/rest/v1/waitlist', {
-                method: 'POST',
-                headers: {
-                    'apikey': SUPABASE_KEY,
-                    'Authorization': 'Bearer ' + SUPABASE_KEY,
-                    'Content-Type': 'application/json',
-                    'Prefer': 'return=minimal'
-                },
-                body: JSON.stringify({ email: email })
-            }).then(function(res) {
-                btn.classList.remove('signup-btn--loading');
-                if (res.ok) {
-                    btn.classList.add('signup-btn--success');
-                    form.classList.add('signup--success');
-                    showMessage(msg, "You're on the list.", 'success');
-                    emailInput.value = '';
-                    setTimeout(function() {
-                        resetBtn(btn);
-                        form.classList.remove('signup--success');
-                    }, 3000);
-                } else if (res.status === 409) {
-                    showMessage(msg, "You're already on the list.", 'success');
-                    btn.disabled = false;
-                } else {
-                    showMessage(msg, 'Something went wrong. Try again.', 'error');
-                    btn.disabled = false;
-                }
-            }).catch(function() {
-                btn.classList.remove('signup-btn--loading');
-                showMessage(msg, 'Something went wrong. Try again.', 'error');
-                btn.disabled = false;
-            });
-        });
-    }
-    submitWaitlist('signup-form-hero', 'signup-message-hero');
-    submitWaitlist('signup-form-footer', 'signup-message-footer');
-    </script>
-</body>
-</html>
+<div class="wrap">
+<header class="masthead"><a class="wordmark" href="/">Well Read</a><nav aria-label="Main navigation"><a href="library.html">The collection</a><a href="#membership">Your first shelf <span aria-hidden="true">→</span></a></nav></header>
+<main>
+<section class="storefront" aria-labelledby="page-title">
+<div class="shop-meta"><span>A personal library for busy founders</span><span>Selected by Phil Mohun</span></div>
+<h1 id="page-title">Beyond<br>business books.</h1>
+<div class="hero-bottom"><div class="shop-offer"><p>Build a serious personal library without researching what to read next. Start with three books worth making room for.</p><a class="button hero-button" href="#membership">Discover your first shelf <span aria-hidden="true">→</span></a><small>Three books. Three field guides. One connected shelf.</small></div>
+<div class="shelf" aria-label="Proposed books for Your first shelf">
+<a href="#feynman"><img src="covers/surely-youre-joking.jpg" alt="Surely You’re Joking, Mr. Feynman! by Richard Feynman"></a>
+<a href="#berger"><img src="covers/ways-of-seeing.jpg" alt="Ways of Seeing by John Berger"></a>
+<a href="#king"><img src="covers/on-writing.jpg" alt="On Writing by Stephen King"></a>
+</div></div></section>
+<div class="shop-label"><span>Your first shelf / proposed opening box</span><span>Curiosity. Observation. Craft.</span></div>
+<section class="shop-story" aria-labelledby="story-title"><h2 id="story-title">For the founder<br>who wants range.</h2><div><p>You know where to find another business book. This is for the shelf beyond it: a scientist’s curiosity, an artist’s eye, a novelist’s approach to craft.</p><p>Selected from my own collection, with a guide that makes the connection clear. You spend your time reading.</p></div></section>
+<section class="selection" aria-label="The three books in the proposed starter box">
+<article class="book-entry" id="feynman"><p class="book-question">Follow your curiosity.</p><h3>Surely You’re Joking, Mr. Feynman!</h3><p class="book-author">Richard Feynman</p><p>A scientist’s lively, often irreverent recollections. A way into a curious mind through stories, rather than a technical textbook.</p><a class="book-source" href="https://wwnorton.com/books/9780393355680">About the book →</a></article>
+<article class="book-entry" id="berger"><p class="book-question">Look again.</p><h3>Ways of Seeing</h3><p class="book-author">John Berger</p><p>A compact, illustrated challenge to how we look at art and images. Something to argue with every time you encounter an advertisement or a painting.</p><a class="book-source" href="https://www.penguinrandomhouse.com/books/324430/ways-of-seeing-by-john-berger/">About the book →</a></article>
+<article class="book-entry" id="king"><p class="book-question">Turn observation into craft.</p><h3>On Writing</h3><p class="book-author">Stephen King</p><p>Part memoir, part guide to the writer’s craft. An inviting look at how a life of reading and noticing becomes work on the page.</p><a class="book-source" href="https://www.simonandschuster.com/books/On-Writing/Stephen-King/9781439193631">About the book →</a></article>
+</section>
+<p class="caption selection-caption">Proposed selections, subject to Phil’s final review and edition availability.</p>
+<section class="guide-section" aria-labelledby="guide-title"><div class="section-intro"><h2 id="guide-title">The guide is<br>part of the book.</h2><div><p>Three books, three one-page field guides, and a digital starter shelf when you order. Each guide explains why the book belongs, where to begin, and what to read beside it.</p><p>Here’s a complete draft. Judge the curation for yourself.</p></div></div>
+<details class="field-guide" open><summary>A sample field guide: Ways of Seeing</summary><article><p class="caption">Draft guide / for Phil’s review</p><h3>What have you stopped noticing?</h3><p><strong>Why this belongs.</strong> Berger asks how the context around an image shapes what we see in it. This is a book to keep near your everyday encounters with pictures, possessions, and advertising.</p><p><strong>Where to begin.</strong> Read the opening essay, then spend time with the images. Choose one familiar advertisement and ask what it invites you to want.</p><p><strong>Its neighbors.</strong> Feynman approaches the world by trying things and asking questions. Berger asks you to question the act of looking itself. King brings that attention to the page: how reading, noticing, and practice shape a writer’s craft.</p><p><strong>One question to keep.</strong> What do I see here, and what have I been taught to see?</p><p><strong>Who it suits.</strong> Readers curious about art, images, and culture. It is a critical argument, rather than a practical design manual; agreeing with every claim isn’t the point.</p><p><strong>Make it yours.</strong> Write down one image you now read differently, and one point you disagree with. Keep the note inside the cover.</p></article></details></section>
+<section class="membership section" id="membership" aria-labelledby="membership-title"><h2 id="membership-title">Your first shelf.</h2><div class="membership-offer"><p>A three-book introduction to reading beyond business. A more creative way of thinking: follow your curiosity, look closely, and turn observation into craft.</p><ul><li>Three physical books, yours to keep</li><li>Three one-page field guides</li><li>A digital starter shelf to begin immediately</li></ul><p class="price">$95 <span>one-time / proposed</span></p><p class="caption">Proposed price includes US shipping. No subscription or automatic renewal. Final editions, price, and dispatch date will be confirmed before sales open.</p><button class="button" id="open-checkout">Preview your starter box <span aria-hidden="true">→</span></button><p class="caption membership-disclosure">Prototype only. No payment or reservation.</p></div></section>
+<section class="starter section" id="starter" aria-labelledby="starter-title"><div class="section-intro"><h2 id="starter-title">Be first<br>to the shelf.</h2><div><p>Leave your email for news of the first starter box: the final books, price, and when you can order.</p></div></div><form id="starter-form"><div class="quiz-fields"><div><label for="signup-email">Your email</label><input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="signup-note"></div></div><button class="button" type="submit">Keep me posted <span aria-hidden="true">→</span></button><p class="caption" id="signup-note">Signup preview. Email collection will be connected before launch.</p><p id="signup-status" role="status" tabindex="-1"></p></form></section>
+<section class="year-story section" aria-labelledby="arc-title"><div class="section-intro"><h2 id="arc-title">Build a library<br>worth reading.</h2><div><p>I’m interested in books that give each other something to argue with. A shelf becomes personal through the things you notice, revisit, and disagree with.</p><p>Start with the box. If the approach earns a place in your reading, the next step is a proposed monthly membership: one book and a field guide, following a connected arc across the year.</p><p class="caption">The annual membership comes later. It isn’t part of this purchase.</p><a class="text-link" href="library.html">Explore my collection →</a></div></div></section>
+<section class="questions section" aria-labelledby="questions-title"><h2 id="questions-title">Before you<br>make room.</h2><div class="question-list"><details><summary>Is this a subscription?</summary><p>The starter box is a one-time purchase. A future monthly membership will be a separate decision, with no automatic enrollment.</p></details><details><summary>Are these your own copies?</summary><p>The selections come from titles in my personal collection. Copy condition and editions will be confirmed before the pilot opens.</p></details><details><summary>What if I already own a book?</summary><p>The duplicate and substitution policy will be finalized before purchase. This prototype does not promise individualized replacements.</p></details><details><summary>When can I order?</summary><p>The pilot is still being prepared. Final pricing, dispatch dates, shipping terms, and refund policy will be published before payment opens.</p></details></div></section>
+<p class="personal-signoff">Questions? <a href="mailto:phil@philmohun.com">Write to me.</a><br><span>— Phil</span></p>
+</main>
+<footer><span>Well Read / Onchain Studies</span><a href="https://stephango.com/flexoki">Flexoki by Steph Ango</a><a href="design/">Design sprint</a><span>© 2026</span></footer>
+</div>
+<dialog id="checkout-dialog" aria-labelledby="checkout-title"><button class="close" id="close-checkout" aria-label="Close starter-box preview">×</button><p class="eyebrow">STARTER BOX / NO PAYMENT</p><h2 id="checkout-title">Your first shelf.</h2><p>Three books + three field guides + a digital starter shelf</p><div class="order-total"><span>One-time starter box / proposed</span><strong>$95</strong></div><p id="checkout-profile" class="caption"></p><form id="checkout-form"><label for="member-name">Your name</label><input id="member-name" autocomplete="name" required><label for="member-email">Email address</label><input id="member-email" type="email" autocomplete="email" required><p class="fine-print">Proposed price includes US shipping. No subscription or renewal. This preview sends and stores no information.</p><label class="consent"><input type="checkbox" required> I understand this is a preview, with no charge or reservation.</label><button class="button" type="submit">Preview the next step →</button><p id="checkout-status" role="status" tabindex="-1"></p></form></dialog>
+<aside class="font-picker" aria-label="Typography preview">
+<button id="font-picker-toggle" class="font-picker-toggle" aria-expanded="false" aria-controls="font-picker-panel"><span aria-hidden="true">Aa</span> Try the fonts <span class="font-picker-current" id="font-picker-current">04</span></button>
+<div id="font-picker-panel" class="font-picker-panel" hidden>
+<div class="font-picker-heading"><div><p>WELL READ / TYPOGRAPHY</p><h2>Compare fonts.</h2></div><button id="font-picker-close" aria-label="Close typography picker">×</button></div>
+<p class="font-picker-intro">Five pairings. Choose one to see it across the page.</p>
+<fieldset><legend class="visually-hidden">Title and body font pairing</legend>
+<label class="font-option"><input type="radio" name="font-pairing" value="editorial"><span><strong>01 / Editorial</strong><span class="font-option-sample" style="font-family:'Libre Caslon Display',Georgia,serif">A library of your own.</span><small>Libre Caslon Display + DM Sans</small><em>Elegant titles, a clear and quiet body.</em></span></label>
+<label class="font-option"><input type="radio" name="font-pairing" value="literary"><span><strong>02 / Literary</strong><span class="font-option-sample" style="font-family:'EB Garamond',Georgia,serif">A library of your own.</span><small>EB Garamond + Source Sans 3</small><em>Closer to the page of a well-loved book.</em></span></label>
+<label class="font-option"><input type="radio" name="font-pairing" value="warm"><span><strong>03 / Warm</strong><span class="font-option-sample" style="font-family:'Lora',Georgia,serif">A library of your own.</span><small>Lora + Inter</small><em>Welcoming, sturdy, easy to read.</em></span></label>
+<label class="font-option"><input type="radio" name="font-pairing" value="character" checked><span><strong>04 / Bookshop <b>Selected direction</b></strong><span class="font-option-sample" style="font-family:'Fraunces',Georgia,serif">A library of your own.</span><small>Fraunces + DM Sans</small><em>The selected bookshop pairing.</em></span></label>
+<label class="font-option"><input type="radio" name="font-pairing" value="journal"><span><strong>05 / Journal</strong><span class="font-option-sample" style="font-family:'Newsreader',Georgia,serif">A library of your own.</span><small>Newsreader + Work Sans</small><em>A thoughtful, contemporary editorial feel.</em></span></label>
+</fieldset><p class="font-picker-note">Your choice is remembered in this browser.</p><p id="font-picker-status" class="visually-hidden" role="status"></p>
+</div></aside>
+<script type="module" src="dev-tools/agentation-loader.js"></script>
+</body></html>

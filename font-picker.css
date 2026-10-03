@@ -1,0 +1,67 @@
+/* Keep the comparison controls stable while page typography changes. */
+.font-picker {
+  position: fixed;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  right: max(20px, env(safe-area-inset-right));
+  z-index: 120;
+  font: 12px/1.5 system-ui, sans-serif;
+  color: var(--ink);
+}
+.font-picker button { font: inherit; cursor: pointer; }
+.font-picker-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--paper);
+  border: 1px solid var(--flexoki-base-200);
+  box-shadow: 0 4px 20px #100f0f15;
+  color: var(--ink);
+}
+.font-picker-toggle > span:first-child { font: 24px/1 Georgia, serif; }
+.font-picker-current { color: var(--accent); font-size: 10px; }
+.font-picker-panel {
+  position: absolute;
+  bottom: 62px;
+  right: 0;
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 110px);
+  overflow: auto;
+  padding: 20px;
+  background: var(--paper);
+  border: 1px solid var(--flexoki-base-200);
+  box-shadow: 0 12px 45px #100f0f22;
+}
+.font-picker-panel[hidden] { display: none; }
+.font-picker-heading { display: flex; justify-content: space-between; gap: 15px; }
+.font-picker-heading p { font-size: 8px; letter-spacing: .12em; color: var(--muted); margin: 0 0 7px; }
+.font-picker-heading h2 { font: 28px/1.15 Georgia, serif; letter-spacing: -.02em; }
+.font-picker-heading button { align-self: start; border: none; background: transparent; color: var(--ink); font-size: 24px; padding: 0 4px; }
+.font-picker-intro, .font-picker-note { font-size: 10px; color: var(--muted); }
+.font-picker fieldset { margin: 16px 0 0; padding: 0; border: 0; }
+.font-option {
+  display: flex;
+  gap: 10px;
+  padding: 12px 10px;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.font-option:hover { background: var(--flexoki-base-50); }
+.font-option:has(input:checked) { border-color: var(--accent); background: var(--flexoki-base-50); }
+.font-option input { accent-color: var(--accent); margin: 3px 0 0; flex-shrink: 0; }
+.font-option > span { display: block; min-width: 0; }
+.font-option strong { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 10px; font-weight: 600; }
+.font-option b { font-size: 8px; color: var(--accent); font-weight: 500; }
+.font-option-sample { display: block; font-size: 24px; line-height: 1.3; margin: 5px 0; }
+.font-option small, .font-option em { display: block; font: 9px/1.6 system-ui, sans-serif; color: var(--muted); }
+.font-picker-note { margin-bottom: 0; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 620px) {
+  .font-picker { right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); }
+  .font-picker-panel { padding: 16px; }
+}
+/* Leave the lower-right corner for the local annotation toolbar. */
+.annotation-dev .font-picker { right: auto; left: 20px; }
+.annotation-dev .font-picker-panel { right: auto; left: 0; }
